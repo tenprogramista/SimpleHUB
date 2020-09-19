@@ -1,0 +1,75 @@
+{
+  "widgetName": {
+    "type": "hidden",
+    "value": "Simple Stream HUD"
+  },
+  "widgetDuration": {
+    "type": "hidden",
+    "value": 7
+  },
+  "bgColor": {
+    "type": "colorpicker",
+    "label": "Background color:",
+    "value": "#FF0000"
+  },
+  "fontFamily": {
+      "type": "googleFont",
+      "label": "Select a font:",
+      "value": "Roboto"
+  },
+  "fontSize": {
+    "type": "number",
+    "label": "Font size (px):",
+    "value": 20
+  },
+  "fontColor": {
+    "type": "colorpicker",
+    "label": "Font color:",
+    "value": "#000000"
+  },
+  "subColor": {
+    "type": "colorpicker",
+    "label": "Sub color:",
+    "value": "#000000"
+  },
+  "giftColor": {
+    "type": "colorpicker",
+    "label": "Gift color:",
+    "value": "#000000"
+  },
+  "communityColor": {
+    "type": "colorpicker",
+    "label": "Community color:",
+    "value": "#000000"
+  },
+  "followColor": {
+    "type": "colorpicker",
+    "label": "Follow color:",
+    "value": "#000000"
+  },
+  "cheerColor": {
+    "type": "colorpicker",
+    "label": "Cheer color:",
+    "value": "#000000"
+  }, 
+  "letterSpacing": {
+    "type": "number",
+    "label": "Letter spacing (px):",
+    "value": 3
+  },
+  "subIcon": { 
+    "type": "text",
+    "label": "Sub Icon Name:",
+    "value": "star"
+  },
+  "followIcon": { 
+    "type": "text",
+    "label": "Fllow Icon Name:",
+    "value": "heart"
+  },
+  "cheerIcon": { 
+    "type": "text",
+    "label": "Cheer Icon Name:",
+    "value": "whatshot"
+  }
+}

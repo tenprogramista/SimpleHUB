@@ -1,0 +1,37 @@
+{
+    "bgColor" : {
+      "type": "colorpicker",
+      "label": "Background color:",
+      "value": "#000000"
+    },
+    "icon" : {
+        "type": "text",
+        "label": "Icon name:",
+        "value": "monetization_on"
+    },
+    "fontFamily": {
+        "type": "googleFont",
+        "label": "Select a font:",
+        "value": "Bebas Neue"
+    },
+    "fontSize": {
+      "type": "number",
+      "label": "Font size (px):",
+      "value": 20
+    },
+    "fontColor": {
+      "type": "colorpicker",
+      "label": "Font color:",
+      "value": "#FFFFFF"
+    },
+     "accentColor": {
+      "type": "colorpicker",
+      "label": "Accent color:",
+      "value": "#FF0000"
+    },
+    "letterSpacing": {
+      "type": "number",
+      "label": "Letter spacing (px):",
+      "value": 3
+    }
+  }

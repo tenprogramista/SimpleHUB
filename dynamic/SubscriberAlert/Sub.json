@@ -1,0 +1,37 @@
+{
+    "bgColor" : {
+        "type": "colorpicker",
+        "label": "Background color:",
+        "value": "#000000"
+    },
+    "icon" : {
+        "type": "text",
+        "label": "Icon name:",
+        "value": "star"
+    },
+    "fontFamily": {
+        "type": "googleFont",
+        "label": "Select a font:",
+        "value": "Roboto"
+    },
+    "fontSize": {
+        "type": "number",
+        "label": "Font size (px):",
+        "value": 16
+    },
+    "fontColor": {
+        "type": "colorpicker",
+        "label": "Font color:",
+        "value": "#000000"
+    },
+    "accentColor": {
+        "type": "colorpicker",
+        "label": "Accent color:",
+        "value": "#000000"
+    },
+    "letterSpacing": {
+        "type": "number",
+        "label": "Letter spacing (px):",
+        "value": 3
+    }
+  }

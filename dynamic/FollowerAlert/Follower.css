@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family={{fontFamily}}');
+
+* {
+  margin: 0;
+  padding: 0;
+  color: {{fontColor}};
+  font-family: {{fontFamily}}, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: {{letterSpacing}}px;
+}
+
+#main-container {
+  width: 100%;
+  height: 100%;
+  background-color: {{bgColor}};
+  display: flex;
+  align-items: center;
+  padding-left: {{fontSize}}px;
+  clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+  animation: reveal 6.6s ease-in-out;
+}
+
+#text-container {
+  line-height: {{fontSize}}px;
+  font-size: {{fontSize}}px;
+}
+
+.material-icons {
+  color: {{accentColor}};
+  vertical-align: middle;
+  animation: pulse 6.6s ease-in-out;
+}
+
+#username {
+  margin-left: 8px; 
+  color: {{accentColor}};
+}
+
+@keyframes reveal {
+  0%   { clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%); }
+  9%   { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }
+  91%  { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }
+  100% { clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%); }
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  4%   { transform: scale(1.15); }
+  8%   { transform: scale(1); }
+  19%  { transform: scale(1); }
+  23%  { transform: scale(1.2); }
+  27%  { transform: scale(1); }
+  38%  { transform: scale(1); }
+  42%  { transform: scale(1.15); }
+  46%  { transform: scale(1); }
+  57%  { transform: scale(1); }
+  61%  { transform: scale(1.1); }
+  65%  { transform: scale(1); }
+  76%  { transform: scale(1); }
+  80%  { transform: scale(1.05); }
+  84%  { transform: scale(1); }
+  95%  { transform: scale(1); }
+  100% { transform: scale(1); }
+}

@@ -16,7 +16,7 @@ There is no overlapping image provided as you can simply add your own logo in th
 **1.0.0** - version directly from my streams with additional option to use Tip/Donation alerts. Not much in the way of customization.
 
 ## Development Plan
-**UP NEXT >** comments and cleaning the code
-> more font and text in-editor customization
-> in-editor text animation customization
-> more alert animations
+* comments and cleaning the code
+* more font and text in-editor customization
+* in-editor text animation customization
+* more alert animations

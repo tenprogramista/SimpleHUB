@@ -1,4 +1,4 @@
-# SimpleHUB 1.0
+# SimpleHUB 1.0.0
 Customizable StreamElements-based alert HUB for your streams. 
 
 ## How To Use It

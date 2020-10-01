@@ -1,85 +1,133 @@
 {
   "widgetName": {
+    "group": "BASIC SETTINGS",
     "type": "hidden",
     "value": "Simple Stream HUD - Background"
   },
   "widgetDuration": {
+    "group": "BASIC SETTINGS",
     "type": "hidden",
     "value": 7
   },
+  "locale": {
+    "group": "BASIC SETTINGS",
+    "type": "text",
+    "label": "User locale (xx-XX):",
+    "value": "en-US"
+  },
+  
   "bgColor": {
+    "group": "BASE APPEARANCE",
     "type": "colorpicker",
     "label": "Background color:",
     "value": "#000000"
   },
   "fontFamily": {
-      "type": "googleFont",
-      "label": "Select a font:",
-      "value": "Roboto"
+    "group": "BASE APPEARANCE",
+    "type": "googleFont",
+    "label": "Select a font:",
+    "value": "Roboto"
   },
   "fontSize": {
+    "group": "BASE APPEARANCE",
     "type": "number",
     "label": "Font size (px):",
     "value": 20
   },
-  "fontColor": {
-    "type": "colorpicker",
-    "label": "Font color:",
-    "value": "#FFFFFF"
-  },
-  "subColor": {
-    "type": "colorpicker",
-    "label": "Sub color:",
-    "value": "#0000FF"
-  },
-  "giftColor": {
-    "type": "colorpicker",
-    "label": "Gift color:",
-    "value": "#0000FF"
-  },
-  "communityColor": {
-    "type": "colorpicker",
-    "label": "Community color:",
-    "value": "#0000FF"
-  },
-  "followColor": {
-    "type": "colorpicker",
-    "label": "Follow color:",
-    "value": "#0FF000"
-  },
-  "cheerColor": {
-    "type": "colorpicker",
-    "label": "Cheer color:",
-    "value": "#00FF00"
-  }, 
-  "tipColor": {
-    "type": "colorpicker",
-    "label": "Tip color:",
-    "value": "#FF0000"
-  }, 
   "letterSpacing": {
+    "group": "BASE APPEARANCE",
     "type": "number",
     "label": "Letter spacing (px):",
     "value": 3
   },
+  "fontColor": {
+    "group": "BASE APPEARANCE",
+    "type": "colorpicker",
+    "label": "Font color:",
+    "value": "#FFFFFF"
+  },
+
+  "subColor": {
+    "group": "SUBS - GENERAL",
+    "type": "colorpicker",
+    "label": "Sub color:",
+    "value": "#0000FF"
+  },
   "subIcon": { 
+    "group": "SUBS - GENERAL",
     "type": "text",
     "label": "Sub Icon Name:",
     "value": "star"
   },
+
+  "giftColor": {
+    "group": "SUBS - GIFTS",
+    "type": "colorpicker",
+    "label": "Gift color:",
+    "value": "#0000FF"
+  },
+  "giftNote": {
+    "group": "SUBS - GIFTS",
+    "type":"text",
+    "label": "A 'gifted-by' note:",
+    "value": "gifted by"
+  },
+
+  "communityColor": {
+    "group": "SUBS - COMMUNITY",
+    "type": "colorpicker",
+    "label": "Community gift color:",
+    "value": "#0000FF"
+  },
+  "communitySingleSuffix": {
+    "group": "SUBS - COMMUNITY",
+    "type": "text",
+    "label": "Suffix for a single community gift:",
+    "value": "gifted someone a sub!"
+  },
+  "communityMultipleSuffix": {
+    "group": "SUBS - COMMUNITY",
+    "type": "text",
+    "label": "Suffix for a bulk community gift:",
+    "value": "gifted many subs!"
+  },
+
+  "followColor": {
+    "group": "FOLLOWS",
+    "type": "colorpicker",
+    "label": "Follow color:",
+    "value": "#0FF000"
+  },
   "followIcon": { 
+    "group": "FOLLOWS",
     "type": "text",
     "label": "Fllow Icon Name:",
     "value": "heart"
   },
+
+  "cheerColor": {
+    "group": "CHEERS",
+    "type": "colorpicker",
+    "label": "Cheer color:",
+    "value": "#00FF00"
+  }, 
   "cheerIcon": { 
+    "group": "CHEERS",
     "type": "text",
     "label": "Cheer Icon Name:",
     "value": "whatshot"
   },
+
+  "tipColor": {
+    "group": "DONATIONS",
+    "type": "colorpicker",
+    "label": "Tip color:",
+    "value": "#FF0000"
+  }, 
   "tipIcon": {
+    "group": "DONATIONS",
     "type": "text",
-    "label": "Cheer Icon Name:",
+    "label": "Donation Icon Name:",
     "value": "monetization_on"
   }
 }

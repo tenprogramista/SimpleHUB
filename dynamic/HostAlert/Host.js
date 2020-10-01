@@ -3,7 +3,7 @@ var text = document.getElementById('username');
 var randomString = "";
 var possible = "48CD3F6H1JKLMNOP0R57UVWXY2";
 
-var username = "{name} hostuje kanał dla {amount} widzów";
+var username = "{name} ({amount})";
 
 setTimeout( function() {
 

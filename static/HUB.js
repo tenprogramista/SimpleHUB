@@ -1,4 +1,4 @@
-let userCurrency, userLocale = 'pl-PL';
+let userCurrency, userLocale = "{locale}";
 
 window.addEventListener('onWidgetLoad', function (obj) {
   let data = obj["detail"]["session"]["data"];

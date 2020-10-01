@@ -4,7 +4,9 @@ var randomString = "";
 var possible = "48CD3F6H1JKLMNOP0R57UVWXY2";
 
 var money = {amount};
-var username = `{name} (${money.toFixed(2).replace(".", ",")} {currency})`;
+
+//TODO username based on streamer currency
+var username = `{name} ({currency} ${money.toFixed(2).replace(".", ",")})`;
 
 setTimeout( function() {
 

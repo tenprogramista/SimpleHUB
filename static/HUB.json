@@ -523,7 +523,7 @@
     "group": "SUBS - COMMUNITY",
     "type": "text",
     "label": "Suffix for a bulk community gift:",
-    "value": "gifted many subs!"
+    "value": "gifted subs"
   },
 
   "followColor": {

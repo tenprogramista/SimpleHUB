@@ -9,6 +9,16 @@
       "label": "Icon name:",
       "value": "star"
     },
+    "singleNote": {
+      "type":"text",
+      "label": "Suffix for a single community gift:",
+      "value": "gifted someone a sub!"
+    },
+    "multipleNote": {
+      "type": "text",
+      "label": "Suffix for a bulk community gift:",
+      "value": "gifted subs"
+    },
     "fontFamily": {
       "type": "googleFont",
       "label": "Select a font:",

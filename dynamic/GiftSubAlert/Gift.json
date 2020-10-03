@@ -9,6 +9,11 @@
       "label": "Icon name:",
       "value": "star"
     },
+    "note": {
+      "type":"text",
+      "label": "A 'gifted-by' note:",
+      "value": "gifted by"
+    },
     "fontFamily": {
       "type": "googleFont",
       "label": "Select a font:",

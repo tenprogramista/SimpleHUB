@@ -1,4 +1,4 @@
-# SimpleHUB 1.1.1
+# SimpleHUB 1.2.0
 Customizable StreamElements-based alert HUB for your streams. 
 
 ## How To Use It
@@ -17,9 +17,9 @@ There is no overlapping image provided as you can simply add your own logo in th
 **1.0.1** - additional option to use Tip/Donation alerts
 **1.1.0** - unified the appearance of alerts and static widget, added custom text
 **1.1.1** - better customization options, bugfixes
+**1.2.0** - sub alert variations
 
 ## Development Plan
-* various sub alerts for gifts
 * in-editor text animation customization
 * more alert animations
 

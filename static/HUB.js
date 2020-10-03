@@ -6,7 +6,7 @@ window.addEventListener('onWidgetLoad', function (obj) {
   let data = obj["detail"]["session"]["data"];
   userCurrency = obj["detail"]["currency"];
   
-  modifyLatestSubscriber(data["subscriber-recent"]);
+  modifyLatestSubscriber(data["subscriber-latest"]);
 });
 
 // GET NEW EVENT
@@ -36,11 +36,11 @@ function modifyLatestSubscriber(data) {
   
   if(data["bulkGifted"] === true) {
     if(data["amount"] === 1) {
-     username.innerHTML = `${data["name"]} funduje komuś subskrypcję!`;
+     username.innerHTML = `${data["name"]} {communitySingleSuffix}`;
       icon.style.color = "{communityColor}";
       return;
     }
-    username.innerHTML = `${data["sender"]} rozdaje subskrypcje (x${data["amount"]})`;
+    username.innerHTML = `${data["sender"]} {communityMultipleSuffix} (x${data["amount"]})`;
     icon.style.color = "{communityColor}";
   }
   else if (data["gifted"] === true) {
@@ -48,7 +48,7 @@ function modifyLatestSubscriber(data) {
       SE_API.resumeQueue();
       return;
     } 
-    username.innerHTML = `${data["name"]} (prezent od ${data["sender"]})`;
+    username.innerHTML = `${data["name"]} ({giftNote} ${data["sender"]})`;
     icon.style.color = "{giftColor}";
   } 
   else {

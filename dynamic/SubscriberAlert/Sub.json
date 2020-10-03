@@ -1,37 +1,37 @@
 {
     "bgColor" : {
-        "type": "colorpicker",
-        "label": "Background color:",
-        "value": "#000000"
+      "type": "colorpicker",
+      "label": "Background color:",
+      "value": "#FFFFFF"
     },
     "icon" : {
-        "type": "text",
-        "label": "Icon name:",
-        "value": "star"
+      "type": "text",
+      "label": "Icon name:",
+      "value": "star"
     },
     "fontFamily": {
-        "type": "googleFont",
-        "label": "Select a font:",
-        "value": "Roboto"
+      "type": "googleFont",
+      "label": "Select a font:",
+      "value": "Bebas Neue"
     },
     "fontSize": {
-        "type": "number",
-        "label": "Font size (px):",
-        "value": 16
+      "type": "number",
+      "label": "Font size (px):",
+      "value": 16
     },
     "fontColor": {
-        "type": "colorpicker",
-        "label": "Font color:",
-        "value": "#000000"
+      "type": "colorpicker",
+      "label": "Font color:",
+      "value": "#000000"
     },
     "accentColor": {
-        "type": "colorpicker",
-        "label": "Accent color:",
-        "value": "#000000"
+      "type": "colorpicker",
+      "label": "Accent (icon) color:",
+      "value": "#FF6666"
     },
     "letterSpacing": {
-        "type": "number",
-        "label": "Letter spacing (px):",
-        "value": 3
+      "type": "number",
+      "label": "Letter spacing (px):",
+      "value": 3
     }
   }

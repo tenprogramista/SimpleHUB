@@ -4,7 +4,7 @@ window.addEventListener('onWidgetLoad', function (obj) {
   let data = obj["detail"]["session"]["data"];
   userCurrency = obj["detail"]["currency"];
   
-  modifyLatestSubscriber(data["subscriber-latest"]);
+  modifyLatestSubscriber(data["subscriber-recent"]);
 });
 
 window.addEventListener('onEventReceived', function (obj) {
@@ -77,7 +77,7 @@ function modifyLatestCheer(data) {
 function modifyLatestTip(data) {
   var icon = document.getElementById("icon");
   var username = document.getElementById("username");
-  
+
   var currency = data.amount.toLocaleString(userLocale, {style: 'currency', currency: userCurrency.code});
   
   username.innerHTML = `${data["name"]} (${currency})`;

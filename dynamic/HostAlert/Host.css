@@ -32,7 +32,13 @@
 
 #username {
   margin-left: 8px; 
-  color: {{accentColor}};
+}
+
+@keyframes scale {
+  0%   { transform: scale(1); }
+  8%   { transform: scale(1); }
+  85%  { transform: scale(1.4); }
+  92%  { transform: scale(1); }
 }
 
 @keyframes reveal {

@@ -1,12 +1,15 @@
+let userCurrency, userLocale = "{locale}";
+
 var text = document.getElementById('username');
 
 var randomString = "";
 var possible = "48CD3F6H1JKLMNOP0R57UVWXY2";
 
 var money = {amount};
+var currency = money.toLocaleString(userLocale, {style: 'currency', currency: userCurrency.code});
 
 //TODO username based on streamer currency
-var username = `{name} ({currency} ${money.toFixed(2).replace(".", ",")})`;
+var username = `{name} (${currency})`;
 
 setTimeout( function() {
 

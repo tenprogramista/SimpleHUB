@@ -11,6 +11,7 @@ var currency = money.toLocaleString(userLocale, {style: 'currency', currency: us
 //TODO username based on streamer currency
 var username = `{name} (${currency})`;
 
+// TEXT EFFECT DELAYED FOR THE REVEAL TO OCCUR BEFORE
 setTimeout( function() {
 
   for(var i=0; i < username.length; i++) {
@@ -30,6 +31,10 @@ function generateRandomTitle(i, random) {
     text.innerHTML = random; }, i*75);
 }
 
+/* GLITCH EFFECT
+ * Made by replacing random character with one from the "possible" string
+ * and switching it back to the original character after a delay. 
+ */
 function glitch(delay) {
   let index = Math.floor(Math.random() * (username.length - 2)) + 2;
   
@@ -45,6 +50,9 @@ function glitch(delay) {
   }, 1680+delay);
 }
 
+/* FLICKERING EFFECT
+ * Is just a multiplied GLITCH EFFECT on different cahracters at different times.
+ */
 function startFlickering() {
   for(var i = Math.ceil(Math.random() * 5) + 4; i >= 0; i--) {
     glitch(Math.floor(Math.random() * 3600));

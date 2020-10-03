@@ -1,11 +1,15 @@
 let userCurrency, userLocale = "{locale}";
 
+//SET LATEST SUB AT THE START
+
 window.addEventListener('onWidgetLoad', function (obj) {
   let data = obj["detail"]["session"]["data"];
   userCurrency = obj["detail"]["currency"];
   
   modifyLatestSubscriber(data["subscriber-recent"]);
 });
+
+// GET NEW EVENT
 
 window.addEventListener('onEventReceived', function (obj) {
   const listener = obj.detail.listener;
@@ -25,6 +29,7 @@ window.addEventListener('onEventReceived', function (obj) {
   } 
 });
 
+// SUB
 function modifyLatestSubscriber(data) {
   var icon = document.getElementById("icon");
   var username = document.getElementById("username");
@@ -54,6 +59,7 @@ function modifyLatestSubscriber(data) {
   icon.innerHTML = "{subIcon}";
 }
 
+// FOLLOW
 function modifyLatestFollower(data) {
   var icon = document.getElementById("icon");
   var username = document.getElementById("username");
@@ -64,6 +70,7 @@ function modifyLatestFollower(data) {
   icon.style.color = "{followColor}";
 }
 
+// CHEER
 function modifyLatestCheer(data) {
   var icon = document.getElementById("icon");
   var username = document.getElementById("username");
@@ -74,6 +81,7 @@ function modifyLatestCheer(data) {
   icon.style.color = "{cheerColor}";
 }
 
+// TIP
 function modifyLatestTip(data) {
   var icon = document.getElementById("icon");
   var username = document.getElementById("username");

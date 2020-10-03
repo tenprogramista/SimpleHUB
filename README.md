@@ -2,15 +2,16 @@
 Customizable StreamElements-based alert HUB for your streams. 
 
 ## How To Use It
-Paste the code into specific Overlay elements.
+Paste the code into StreamElements Overlay Editor.
 
-> **static**
-> Background element. Created with "Custom Widget".
+### STATIC
+In StreamElements Overlay Editor click on "+", then on "STATIC/CUSTOM" in the menu. Select "Custom widget". A new layer will be added. Click on it to open the layer menu and select  "Settings" then "OPEN EDITOR". Paste the code to the proper tabs in the editor (FIELDS should contain the json file contents.) Once you've done that, the static widget properties should be visible for you in different categories ("BASIC SETTINGS", "BASE APPEARANCE", "SUBS", "FOLLOWS", etc.) Customize them to your liking.
 
-> **dynamic**
-> Alerts covering the background element. Use default "AlertBox" and modify alerts according to the specific folders.
+### DYNAMIC
+In StreamElements Overlay Editor click on "+", then on "ALERTS" and "AlertBox" in the menu. A new layer will be added. Click on it and select the cogwheel by the alert type you want to add/modify. Click on "OPEN CSS EDITOR" and paste the code into the proper tabs (FIELDS should contain the json file contents.) Once you're done, the extended alert properties will be visible. Customize them to you liking. Repeat for all the alerts you want to have.
 
-There is no overlapping image provided as you can simply add your own logo in the StreamElements editor.
+**TIPS**
+For the best effect the font size and icons should be the same in STATIC and DYNAMIC element of the HUB.
 
 ## Version Log
 **1.0.0** - version directly from my streams

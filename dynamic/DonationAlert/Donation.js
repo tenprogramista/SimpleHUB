@@ -1,12 +1,10 @@
-let userCurrency, userLocale = "{locale}";
-
 var text = document.getElementById('username');
 
 var randomString = "";
 var possible = "48CD3F6H1JKLMNOP0R57UVWXY2";
 
 //FIXME parse the currency based on the userLocale
-var username = `{name}`;
+var username = `{name} {note}`;
 
 // TEXT EFFECT DELAYED FOR THE REVEAL TO OCCUR BEFORE
 setTimeout( function() {

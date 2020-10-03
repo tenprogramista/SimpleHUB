@@ -1,6 +1,5 @@
 {
   "locale": {
-    "group": "BASIC SETTINGS",
     "type": "dropdown",
     "label": "Locale",
     "value": "en-US",
@@ -450,6 +449,11 @@
       "type": "text",
       "label": "Icon name:",
       "value": "monetization_on"
+    },
+    "note": {
+      "type": "text",
+      "label": "Tip note:",
+      "value": "just tipped"
     },
     "fontFamily": {
       "type": "googleFont",

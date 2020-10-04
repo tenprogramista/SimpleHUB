@@ -12,6 +12,7 @@ In StreamElements Overlay Editor click on "+", then on "ALERTS" and "AlertBox" i
 
 **TIPS**
 For the best effect the font size and icons should be the same in STATIC and DYNAMIC element of the HUB.
+Until the issue is resolved, use BEBAS NEUE (default font) inside the HUB.
 
 ## Version Log
 **1.0.0** - version directly from my streams
@@ -35,3 +36,4 @@ For the best effect the font size and icons should be the same in STATIC and DYN
 
 ## Known Issues
 * donated amount not being shown in alerts
+* text and icons not being aligned for some fonts

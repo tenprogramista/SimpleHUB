@@ -1,4 +1,4 @@
-# SimpleHUB 1.2.1
+# SimpleHUB 1.3.0
 Customizable StreamElements-based alert HUB for your streams. 
 
 ## How To Use It
@@ -14,19 +14,23 @@ In StreamElements Overlay Editor click on "+", then on "ALERTS" and "AlertBox" i
 For the best effect the font size and icons should be the same in STATIC and DYNAMIC element of the HUB.
 
 ## Version Log
-**1.0.0** - version directly from my streams
+**1.3.0** - move alerts inside STATIC element (Custom Widget)
 
-**1.0.1** - additional option to use Tip/Donation alerts
-
-**1.1.0** - unified the appearance of alerts and static widget, added custom text
-
-**1.1.1** - better customization options, bugfixes
-
-**1.2.0** - sub alert variations
+**1.2.2** - resizing fonts resizes the icon as well, fixed alignment issues
 
 **1.2.1** - tip alert with custom suffix note (currency/amount issue workaround)
 
-**1.2.2** - resizing fonts resizes the icon as well, fixed alignment issues
+**1.2.0** - sub alert variations
+
+**1.1.1** - better customization options, bugfixes
+
+**1.1.0** - unified the appearance of alerts and static widget, added custom text
+
+**1.0.1** - additional option to use Tip/Donation alerts
+
+**1.0.0** - version directly from my streams
+
+
 
 ## Current Tasks
 * bugfix: tip alert currency

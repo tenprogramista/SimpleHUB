@@ -456,6 +456,12 @@
     "label": "Background color:",
     "value": "#000000"
   },
+  "fontColor": {
+    "group": "BASE APPEARANCE",
+    "type": "colorpicker",
+    "label": "Font color:",
+    "value": "#FFFFFF"
+  },
   "fontFamily": {
     "group": "BASE APPEARANCE",
     "type": "googleFont",
@@ -474,11 +480,17 @@
     "label": "Letter spacing (px):",
     "value": 3
   },
-  "fontColor": {
-    "group": "BASE APPEARANCE",
-    "type": "colorpicker",
-    "label": "Font color:",
-    "value": "#FFFFFF"
+  "iconMargin": {
+    "group":"BASE APPEARANCE",
+    "type":"text",
+    "label":"Distance from left edge to icon (px):",
+    "value": 24
+  },
+  "nameMargin": {
+    "group":"BASE APPEARANCE",
+    "type":"text",
+    "label":"Distance from icon to username (px):",
+    "value": 12
   },
 
   "subColor": {

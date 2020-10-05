@@ -16,58 +16,107 @@ window.addEventListener('onEventReceived', function (obj) {
   const data = obj["detail"]["event"];
   
   if(listener == "tip-latest") {
-    setTimeout(function() { modifyLatestTip(data); }, 3000);
+    modifyLatestTip(data);
   }
   else if(listener === "subscriber-latest") {
-    setTimeout(function() { modifyLatestSubscriber(data); }, 3000);
+    modifyLatestSubscriber(data);
   }
   else if(listener === "follower-latest") {
-    setTimeout(function() { modifyLatestFollower(data); }, 3000);
+    modifyLatestFollower(data);
   }
   else if(listener == "cheer-latest") {
-    setTimeout(function() { modifyLatestCheer(data); }, 3000);
+    modifyLatestCheer(data);
   } 
 });
+
+// STATIC ELEMENT: LATEST EVENT
 
 // SUB
 function modifyLatestSubscriber(data) {
   var icon = document.getElementById("icon");
   var username = document.getElementById("username");
+  var dynamic = document.getElementById("dynamic");
   
   if(data["bulkGifted"] === true) {
+
     if(data["amount"] === 1) {
-     username.innerHTML = `${data["name"]} {communitySingleSuffix}`;
-      icon.style.color = "{communityColor}";
+      
+      // HUB
+      setTimeout(() => {
+        username.innerHTML = `${data["name"]} {communitySingleSuffix}`;
+        icon.style.color = "{communityColor}";
+        icon.innerHTML = "{subIcon}";
+      }, 3000);
+
+      // ALERT
+      dynamic.innerHTML = 
+        `<div class="alert sub"><i class="material-icons sized scale">{subIcon}</i><div class="name">${data["name"]} {communitySingleSuffix}</div></div>`;
+
       return;
     }
-    username.innerHTML = `${data["sender"]} {communityMultipleSuffix} (x${data["amount"]})`;
-    icon.style.color = "{communityColor}";
+
+    // HUB
+    setTimeout(() => {
+      username.innerHTML = `${data["sender"]} {communityMultipleSuffix} (x${data["amount"]})`;
+      icon.style.color = "{communityColor}";
+      icon.innerHTML = "{subIcon}";
+    }, 3000);
+
+    // ALERT
+    dynamic.innerHTML = 
+      `<div class="alert sub"><i class="material-icons sized scale">{subIcon}</i><div class="name">${data["sender"]} {communityMultipleSuffix} (x${data["amount"]})</div></div>`;
   }
+
   else if (data["gifted"] === true) {
+
     if (data["isCommunityGift"] === true) {
       SE_API.resumeQueue();
       return;
     } 
-    username.innerHTML = `${data["name"]} ({giftNote} ${data["sender"]})`;
-    icon.style.color = "{giftColor}";
+
+    // HUB
+    setTimeout(() => {
+      username.innerHTML = `${data["name"]} ({giftNote} ${data["sender"]})`;
+      icon.style.color = "{giftColor}";
+      icon.innerHTML = "{subIcon}";
+    }, 3000);
+
+    // ALERT
+    dynamic.innerHTML = 
+      `<div class="alert sub"><i class="material-icons sized scale">{subIcon}</i><div class="name">${data["name"]} ({giftNote} ${data["sender"]})</div></div>`;
   } 
+
   else {
-    username.innerHTML = `${data["name"]} (x${data["amount"]})`;
-    icon.style.color = "{subColor}";
+
+    // HUB
+    setTimeout(() => {
+      username.innerHTML = `${data["name"]} (x${data["amount"]})`;
+      icon.style.color = "{subColor}";
+      icon.innerHTML = "{subIcon}";
+    }, 3000);
+
+    // ALERT
+    dynamic.innerHTML = 
+      `<div class="alert sub"><i class="material-icons sized scale">{subIcon}</i><div class="name">${data.name} (x${data.amount})</div></div>`;
   }
-  
-  icon.innerHTML = "{subIcon}";
 }
 
 // FOLLOW
 function modifyLatestFollower(data) {
   var icon = document.getElementById("icon");
   var username = document.getElementById("username");
+  var dynamic = document.getElementById("dynamic");
   
-  username.innerHTML = `${data["name"]}`;
-    
-  icon.innerHTML = "{followIcon}";
-  icon.style.color = "{followColor}";
+  // HUB
+  setTimeout(() => {
+    username.innerHTML = `${data["name"]}`;
+    icon.innerHTML = "{followIcon}";
+    icon.style.color = "{followColor}";
+  }, 3000);
+
+  // ALERT
+  dynamic.innerHTML = 
+  `<div class="alert follow"><i class="material-icons sized pulse">{followIcon}</i><div class="name">${data.name}</div></div>`;
 }
 
 // CHEER
@@ -75,6 +124,7 @@ function modifyLatestCheer(data) {
   var icon = document.getElementById("icon");
   var username = document.getElementById("username");
   
+  // HUB
   username.innerHTML = `${data["name"]} (X${data["amount"]})`;
     
   icon.innerHTML = "{cheerIcon}";
@@ -85,9 +135,9 @@ function modifyLatestCheer(data) {
 function modifyLatestTip(data) {
   var icon = document.getElementById("icon");
   var username = document.getElementById("username");
-
   var currency = data.amount.toLocaleString(userLocale, {style: 'currency', currency: userCurrency.code});
   
+  // HUB
   username.innerHTML = `${data["name"]} (${currency})`;
     
   icon.innerHTML = "{tipIcon}";

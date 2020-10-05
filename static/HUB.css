@@ -3,7 +3,6 @@
 * {
   margin: 0;
   padding: 0;
-  color: {{fontColor}};
   font-family: {{fontFamily}}, sans-serif;
   text-transform: uppercase;
   letter-spacing: {{letterSpacing}}px;
@@ -19,16 +18,19 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: {{bgColor}};
   display: flex;
   align-items: center;
-  padding-left: 24px;
+  background-color: {{bgColor}};
+  color: {{fontColor}};
+  padding-left: {{iconMargin}}px;
 }
 
 #dynamic {
   width: 100%;
   height: 100%;
   position: absolute;
+  display: flex;
+  align-items: center;
   background-color: transparent;
 }
 
@@ -38,8 +40,16 @@
   font-size: {{fontSize}}px;
 }
 
+.scale {
+  animation: scale 6.6s ease-in-out;
+}
+
+.pulse {
+  animation: pulse 6.6s ease-in-out;
+}
+
 .name {
-  margin-left: 12px;
+  margin-left: {{nameMargin}}px;
   line-height: {{fontSize}}px;
   font-size: {{fontSize}}px;
 }
@@ -49,7 +59,8 @@
   height: 100%;
   display: flex;
   align-items: center;
-  padding-left: 20px;
+  animation: reveal 6.6s ease-in-out forwards;
+  padding-left: {{iconMargin}}px;
 }
 
 .alert.sub {
@@ -86,7 +97,26 @@
   0%   { transform: scale(1); }
   8%   { transform: scale(1); }
   85%  { transform: scale(1.4); }
-  92% { transform: scale(1); }
+  92%  { transform: scale(1); }
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  4%   { transform: scale(1.15); }
+  8%   { transform: scale(1); }
+  19%  { transform: scale(1); }
+  23%  { transform: scale(1.2); }
+  27%  { transform: scale(1); }
+  38%  { transform: scale(1); }
+  42%  { transform: scale(1.15); }
+  46%  { transform: scale(1); }
+  57%  { transform: scale(1); }
+  61%  { transform: scale(1.1); }
+  65%  { transform: scale(1); }
+  76%  { transform: scale(1); }
+  80%  { transform: scale(1.05); }
+  84%  { transform: scale(1); }
+  100% { transform: scale(1); }
 }
 
 @keyframes reveal {

@@ -1,12 +1,4 @@
 {
-  "widgetName": {
-    "type": "hidden",
-    "value": "Simple Stream HUD - Background"
-  },
-  "widgetDuration": {
-    "type": "hidden",
-    "value": 7
-  },
   "locale": {
     "group": "BASIC SETTINGS",
     "type": "dropdown",
@@ -480,11 +472,29 @@
     "label": "Letter spacing (px):",
     "value": 3
   },
+  "iconSize": {
+    "group":"BASE APPEARANCE",
+    "type":"text",
+    "label":"Icon size (px):",
+    "value": 24
+  },
   "iconMargin": {
     "group":"BASE APPEARANCE",
     "type":"text",
     "label":"Distance from left edge to icon (px):",
     "value": 24
+  },
+  "iconTop": {
+    "group":"BASE APPEARANCE",
+    "type":"text",
+    "label":"Top margin for Icon (px):",
+    "value": 0
+  },
+  "iconBottom": {
+    "group":"BASE APPEARANCE",
+    "type":"text",
+    "label":"Bottom margin for Icon (px):",
+    "value": 6
   },
   "nameMargin": {
     "group":"BASE APPEARANCE",
@@ -601,5 +611,13 @@
     "type": "text",
     "label": "Raid Icon Name:",
     "value": "security"
-  }  
+  },
+  "widgetName": {
+    "type": "hidden",
+    "value": "Simple Stream HUD - Background"
+  },
+  "widgetDuration": {
+    "type": "hidden",
+    "value": 7
+  }
 }

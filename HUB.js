@@ -6,7 +6,7 @@ window.addEventListener('onWidgetLoad', function (obj) {
   let data = obj.detail.session.data;
   userCurrency = obj.detail.currency;
   
-  subscriber(data["subscriber-latest"]);
+  follower(data["follower-latest"]);
 });
 
 // ON EVENT
@@ -155,7 +155,7 @@ function tip(data) {
 
   // ALERT
   dynamic.innerHTML = 
-  `<div class="alert tip"><i class="material-icons sized scale">{followIcon}</i><div class="name">${data.name} (${currency})</div></div>`;
+  `<div class="alert tip"><i class="material-icons sized scale">{tipIcon}</i><div class="name">${data.name} (${currency})</div></div>`;
 }
 
 // HOST

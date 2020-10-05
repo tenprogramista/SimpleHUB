@@ -35,9 +35,12 @@
 }
 
 .material-icons.sized {
+  display: inline-block;
   vertical-align: middle;
+  margin-top: {{iconTop}}px;
+  margin-bottom: {{iconBottom}}px;
   line-height: {{fontSize}}px;
-  font-size: {{fontSize}}px;
+  font-size: {{iconSize}}px;
 }
 
 .scale {

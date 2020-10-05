@@ -521,6 +521,7 @@
     "label": "Sub alert sound:"
   },
   "subVolume": {
+    "group":"SUBS - GENERAL",
     "type": "slider",
     "label": "Alert volume:",
     "value": 0.5,
@@ -579,6 +580,7 @@
     "label": "Follow alert sound:"
   },
   "followVolume": {
+    "group":"FOLLOWS",
     "type": "slider",
     "label": "Alert volume:",
     "value": 0.5,
@@ -605,6 +607,7 @@
     "label": "Cheer alert sound:"
   },
   "cheerVolume": {
+    "group":"CHEERS",
     "type": "slider",
     "label": "Alert volume:",
     "value": 0.5,
@@ -631,6 +634,7 @@
     "label": "Donations alert sound:"
   },
   "tipVolume": {
+    "group":"DONATIONS",
     "type": "slider",
     "label": "Alert volume:",
     "value": 0.5,
@@ -657,6 +661,7 @@
     "label": "Host alert sound:"
   },
   "hostVolume": {
+    "group":"HOSTS",
     "type": "slider",
     "label": "Alert volume:",
     "value": 0.5,
@@ -683,6 +688,7 @@
     "label": "Raid alert sound:"
   },
   "raidVolume": {
+    "group":"RAIDS",
     "type": "slider",
     "label": "Alert volume:",
     "value": 0.5,

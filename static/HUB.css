@@ -18,15 +18,14 @@
   padding-left: {{fontSize}}px;
 }
 
-#text-container {
+.material-icons.sized {
+  vertical-align: middle;
   line-height: {{fontSize}}px;
   font-size: {{fontSize}}px;
 }
 
-.material-icons {
-  vertical-align: middle;
-}
-
 #username {
   margin-left: 8px; 
+  line-height: {{fontSize}}px;
+  font-size: {{fontSize}}px;
 }

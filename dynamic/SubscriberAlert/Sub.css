@@ -20,20 +20,18 @@
   animation: reveal 6.6s ease-in-out;
 }
 
-#text-container {
-  line-height: {{fontSize}}px;
-  font-size: {{fontSize}}px;
-}
-
-.material-icons {
+.material-icons.sized {
   color: {{accentColor}};
   vertical-align: middle;
+  line-height: {{fontSize}}px;
+  font-size: {{fontSize}}px;
   animation: scale 6.6s ease-in-out;
 }
 
 #username {
   margin-left: 8px; 
-  color: {{accentColor}};
+  line-height: {{fontSize}}px;
+  font-size: {{fontSize}}px;
 }
 
 @keyframes scale {

@@ -27,6 +27,8 @@ Until the issue is resolved, use BEBAS NEUE (default font) inside the HUB.
 
 **1.2.1** - tip alert with custom suffix note (currency/amount issue workaround)
 
+**1.2.2** - resizing fonts resizes the icon as well, fixed alignment issues
+
 ## Current Tasks
 * bugfix: tip alert currency
 

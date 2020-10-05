@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family={{fontFamily}}');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: {{fontFamily}}, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: {{letterSpacing}}px;
+}
+
+#main-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#static {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  background-color: {{bgColor}};
+  color: {{fontColor}};
+  padding-left: {{iconMargin}}px;
+}
+
+#dynamic {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+
+.material-icons.sized {
+  vertical-align: middle;
+  line-height: {{fontSize}}px;
+  font-size: {{fontSize}}px;
+}
+
+.scale {
+  animation: scale 6.6s ease-in-out;
+}
+
+.pulse {
+  animation: pulse 6.6s ease-in-out;
+}
+
+.name {
+  margin-left: {{nameMargin}}px;
+  line-height: {{fontSize}}px;
+  font-size: {{fontSize}}px;
+}
+
+.alert {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  animation: reveal 6.6s ease-in-out forwards;
+  padding-left: {{iconMargin}}px;
+}
+
+.alert.sub {
+  background-color: {{subColor}};
+  color: {{bgColor}};
+}
+
+.alert.follow {
+  background-color: {{followColor}};
+  color: {{bgColor}};
+}
+
+.alert.cheer {
+  background-color: {{cheerColor}};
+  color: {{bgColor}};
+}
+
+.alert.tip{
+  background-color: {{tipColor}};
+  color: {{bgColor}};
+}
+
+.alert.host {
+  background-color: {{hostColor}};
+  color: {{bgColor}};
+}
+
+.alert.raid {
+  background-color: {{raidColor}};
+  color: {{bgColor}};
+}
+
+@keyframes scale {
+  0%   { transform: scale(1); }
+  8%   { transform: scale(1); }
+  85%  { transform: scale(1.4); }
+  92%  { transform: scale(1); }
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  4%   { transform: scale(1.15); }
+  8%   { transform: scale(1); }
+  19%  { transform: scale(1); }
+  23%  { transform: scale(1.2); }
+  27%  { transform: scale(1); }
+  38%  { transform: scale(1); }
+  42%  { transform: scale(1.15); }
+  46%  { transform: scale(1); }
+  57%  { transform: scale(1); }
+  61%  { transform: scale(1.1); }
+  65%  { transform: scale(1); }
+  76%  { transform: scale(1); }
+  80%  { transform: scale(1.05); }
+  84%  { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes reveal {
+  0%   { clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%); }
+  9%   { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }
+  91%  { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }
+  100% { clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%); }
+}

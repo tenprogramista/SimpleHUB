@@ -456,6 +456,12 @@
     "label": "Background color:",
     "value": "#000000"
   },
+  "fontColor": {
+    "group": "BASE APPEARANCE",
+    "type": "colorpicker",
+    "label": "Font color:",
+    "value": "#FFFFFF"
+  },
   "fontFamily": {
     "group": "BASE APPEARANCE",
     "type": "googleFont",
@@ -474,11 +480,17 @@
     "label": "Letter spacing (px):",
     "value": 3
   },
-  "fontColor": {
-    "group": "BASE APPEARANCE",
-    "type": "colorpicker",
-    "label": "Font color:",
-    "value": "#FFFFFF"
+  "iconMargin": {
+    "group":"BASE APPEARANCE",
+    "type":"text",
+    "label":"Distance from left edge to icon (px):",
+    "value": 24
+  },
+  "nameMargin": {
+    "group":"BASE APPEARANCE",
+    "type":"text",
+    "label":"Distance from icon to username (px):",
+    "value": 12
   },
 
   "subColor": {
@@ -563,5 +575,31 @@
     "type": "text",
     "label": "Donation Icon Name:",
     "value": "monetization_on"
+  },
+  
+  "hostColor": {
+    "group": "HOSTS",
+    "type": "colorpicker",
+    "label": "Host color:",
+    "value": "#F0cF5F"
+  }, 
+  "hostIcon": {
+    "group": "HOSTS",
+    "type": "text",
+    "label": "Host Icon Name:",
+    "value": "tv"
+  },
+
+  "raidColor": {
+    "group": "RAIDS",
+    "type": "colorpicker",
+    "label": "Raid color:",
+    "value": "#Fc5FcF"
+  }, 
+  "raidIcon": {
+    "group": "RAIDS",
+    "type": "text",
+    "label": "Raid Icon Name:",
+    "value": "security"
   }  
 }

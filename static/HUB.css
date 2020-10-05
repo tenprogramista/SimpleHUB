@@ -12,10 +12,24 @@
 #main-container {
   width: 100%;
   height: 100%;
+  position: relative;
+}
+
+#static {
+  width: 100%;
+  height: 100%;
+  position: absolute;
   background-color: {{bgColor}};
   display: flex;
   align-items: center;
-  padding-left: {{fontSize}}px;
+  padding-left: 24px;
+}
+
+#dynamic {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: transparent;
 }
 
 .material-icons.sized {
@@ -24,8 +38,60 @@
   font-size: {{fontSize}}px;
 }
 
-#username {
-  margin-left: 8px; 
+.name {
+  margin-left: 12px;
   line-height: {{fontSize}}px;
   font-size: {{fontSize}}px;
+}
+
+.alert {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.alert.sub {
+  background-color: {{subColor}};
+  color: {{bgColor}};
+}
+
+.alert.follow {
+  background-color: {{followColor}};
+  color: {{bgColor}};
+}
+
+.alert.cheer {
+  background-color: {{cheerColor}};
+  color: {{bgColor}};
+}
+
+.alert.tip{
+  background-color: {{tipColor}};
+  color: {{bgColor}};
+}
+
+.alert.host {
+  background-color: {{hostColor}};
+  color: {{bgColor}};
+}
+
+.alert.raid {
+  background-color: {{raidColor}};
+  color: {{bgColor}};
+}
+
+@keyframes scale {
+  0%   { transform: scale(1); }
+  8%   { transform: scale(1); }
+  85%  { transform: scale(1.4); }
+  92% { transform: scale(1); }
+}
+
+@keyframes reveal {
+  0%   { clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%); }
+  9%   { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }
+  91%  { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }
+  100% { clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%); }
 }

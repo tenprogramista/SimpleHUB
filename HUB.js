@@ -54,8 +54,14 @@ function subscriber(data) {
 
       // ALERT
       dynamic.innerHTML = 
-        `<div class="alert sub"><i class="material-icons sized scale">{subIcon}</i><div class="name">${data.name} {communitySingleSuffix}</div></div>`;
+        `<div class="alert sub">
+        <i class="material-icons sized scale">{subIcon}</i>
+        <audio id="audio" autoplay hidden src="{subAudio}></audio>
+        <div class="name">${data.name} {communitySingleSuffix}</div>
+        </div>`;
 
+
+      document.getElementById('audio').volume = {subVolume};
       return;
     }
 
@@ -68,7 +74,13 @@ function subscriber(data) {
 
     // ALERT
     dynamic.innerHTML = 
-      `<div class="alert sub"><i class="material-icons sized scale">{subIcon}</i><div class="name">${data.sender} {communityMultipleSuffix} (x${data.amount})</div></div>`;
+      `<div class="alert sub">
+      <i class="material-icons sized scale">{subIcon}</i>
+      <audio id="audio" autoplay hidden src="{subAudio}"></audio>
+      <div class="name">${data.sender} {communityMultipleSuffix} (x${data.amount})</div>
+      </div>`;
+
+      document.getElementById('audio').volume = {subVolume};
   }
 
   else if (data.gifted === true) {
@@ -87,7 +99,13 @@ function subscriber(data) {
 
     // ALERT
     dynamic.innerHTML = 
-      `<div class="alert sub"><i class="material-icons sized scale">{subIcon}</i><div class="name">${data.name} ({giftNote} ${data.sender})</div></div>`;
+      `<div class="alert sub">
+      <i class="material-icons sized scale">{subIcon}</i>
+      <audio id="audio" autoplay hidden src="{subAudio}"></audio>
+      <div class="name">${data.name} ({giftNote} ${data.sender})</div>
+      </div>`;
+
+      document.getElementById('audio').volume = {subVolume};
   } 
 
   else {
@@ -101,7 +119,13 @@ function subscriber(data) {
 
     // ALERT
     dynamic.innerHTML = 
-      `<div class="alert sub"><i class="material-icons sized scale">{subIcon}</i><div class="name">${data.name} (x${data.amount})</div></div>`;
+      `<div class="alert sub">
+      <i class="material-icons sized scale">{subIcon}</i>
+      <audio id="audio" autoplay hidden src="{subAudio}"></audio>
+      <div class="name">${data.name} (x${data.amount})</div>
+      </div>`;
+
+      document.getElementById('audio').volume = {subVolume};
   }
 }
 
@@ -120,7 +144,13 @@ function follower(data) {
 
   // ALERT
   dynamic.innerHTML = 
-  `<div class="alert follow"><i class="material-icons sized pulse">{followIcon}</i><div class="name">${data.name}</div></div>`;
+  `<div class="alert follow">
+  <i class="material-icons sized pulse">{followIcon}</i>
+  <audio id="audio" autoplay hidden src="{followAudio}"></audio>
+  <div class="name">${data.name}</div>
+  </div>`;
+
+  document.getElementById('audio').volume = {followVolume};
 }
 
 // CHEER
@@ -137,7 +167,13 @@ function cheer(data) {
 
   // ALERT
   dynamic.innerHTML = 
-  `<div class="alert cheer"><i class="material-icons sized pulse">{cheerIcon}</i><div class="name">${data.name} (X${data.amount})</div></div>`;
+  `<div class="alert cheer">
+  <i class="material-icons sized pulse">{cheerIcon}</i>
+  <audio id="audio" autoplay hidden src="{cheerAudio}"></audio>
+  <div class="name">${data.name} (X${data.amount})</div>
+  </div>`;
+
+  document.getElementById('audio').volume = {cheerVolume};
 }
 
 // TIP
@@ -155,7 +191,13 @@ function tip(data) {
 
   // ALERT
   dynamic.innerHTML = 
-  `<div class="alert tip"><i class="material-icons sized scale">{tipIcon}</i><div class="name">${data.name} (${currency})</div></div>`;
+  `<div class="alert tip">
+  <i class="material-icons sized scale">{tipIcon}</i>
+  <audio id="audio" autoplay hidden src="{tipAudio}"></audio>
+  <div class="name">${data.name} (${currency})</div>
+  </div>`;
+
+  document.getElementById('audio').volume = {tipVolume};
 }
 
 // HOST
@@ -172,7 +214,13 @@ function host(data) {
 
   // ALERT
   dynamic.innerHTML = 
-  `<div class="alert host"><i class="material-icons sized scale">{hostIcon}</i><div class="name">${data.name} (${data.amount})</div></div>`;
+  `<div class="alert host">
+  <i class="material-icons sized scale">{hostIcon}</i>
+  <audio id="audio" autoplay hidden src="{hostAudio}"></audio>
+  <div class="name">${data.name} (${data.amount})</div>
+  </div>`;
+
+  document.getElementById('audio').volume = {hostVolume};
 }
 
 // RAID
@@ -189,5 +237,11 @@ function raid(data) {
 
   // ALERT
   dynamic.innerHTML = 
-  `<div class="alert raid"><i class="material-icons sized scale">{raidIcon}</i><div class="name">${data.name} (${data.amount})</div></div>`;
+  `<div class="alert raid">
+  <i class="material-icons sized scale">{raidIcon}</i>
+  <audio id="audio" autoplay hidden src="{raidAudio}"></audio>
+  <div class="name">${data.name} (${data.amount})</div>
+  </div>`;
+
+  document.getElementById('audio').volume = {raidVolume};
 }

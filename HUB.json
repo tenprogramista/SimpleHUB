@@ -515,6 +515,19 @@
     "label": "Sub Icon Name:",
     "value": "star"
   },
+  "subAudio": {
+    "group":"SUBS - GENERAL",
+    "type": "sound-input",
+    "label": "Sub alert sound:"
+  },
+  "subVolume": {
+    "type": "slider",
+    "label": "Alert volume:",
+    "value": 0.5,
+    "min": 0,
+    "max": 1,
+    "step": 0.02
+  },
 
   "giftColor": {
     "group": "SUBS - GIFTS",
@@ -560,6 +573,19 @@
     "label": "Fllow Icon Name:",
     "value": "favorite"
   },
+  "followAudio": {
+    "group": "FOLLOWS",
+    "type": "sound-input",
+    "label": "Follow alert sound:"
+  },
+  "followVolume": {
+    "type": "slider",
+    "label": "Alert volume:",
+    "value": 0.5,
+    "min": 0,
+    "max": 1,
+    "step": 0.02
+  },
 
   "cheerColor": {
     "group": "CHEERS",
@@ -572,6 +598,19 @@
     "type": "text",
     "label": "Cheer Icon Name:",
     "value": "whatshot"
+  },
+  "cheerAudio": {
+    "group": "CHEERS",
+    "type": "sound-input",
+    "label": "Cheer alert sound:"
+  },
+  "cheerVolume": {
+    "type": "slider",
+    "label": "Alert volume:",
+    "value": 0.5,
+    "min": 0,
+    "max": 1,
+    "step": 0.02
   },
 
   "tipColor": {
@@ -586,6 +625,19 @@
     "label": "Donation Icon Name:",
     "value": "monetization_on"
   },
+  "tipAudio": {
+    "group":"DONATIONS",
+    "type": "sound-input",
+    "label": "Donations alert sound:"
+  },
+  "tipVolume": {
+    "type": "slider",
+    "label": "Alert volume:",
+    "value": 0.5,
+    "min": 0,
+    "max": 1,
+    "step": 0.02
+  },
   
   "hostColor": {
     "group": "HOSTS",
@@ -598,6 +650,19 @@
     "type": "text",
     "label": "Host Icon Name:",
     "value": "tv"
+  },
+  "hostAudio": {
+    "group":"HOSTS",
+    "type": "sound-input",
+    "label": "Host alert sound:"
+  },
+  "hostVolume": {
+    "type": "slider",
+    "label": "Alert volume:",
+    "value": 0.5,
+    "min": 0,
+    "max": 1,
+    "step": 0.02
   },
 
   "raidColor": {
@@ -612,6 +677,21 @@
     "label": "Raid Icon Name:",
     "value": "security"
   },
+  "raidAudio": {
+    "group":"RAIDS",
+    "type": "sound-input",
+    "label": "Raid alert sound:"
+  },
+  "raidVolume": {
+    "type": "slider",
+    "label": "Alert volume:",
+    "value": 0.5,
+    "min": 0,
+    "max": 1,
+    "step": 0.02
+  },
+
+
   "widgetName": {
     "type": "hidden",
     "value": "Simple Stream HUD - Background"

@@ -441,6 +441,12 @@
       "zu": "Zulu"
     }
   },
+  "widgetDuration": {
+    "group":"BASIC SETTINGS",
+    "type": "number",
+    "label": "Alerts duration (s):",
+    "value": 7
+  },
   
   "bgColor": {
     "group": "BASE APPEARANCE",
@@ -647,7 +653,7 @@
     "group": "HOSTS",
     "type": "colorpicker",
     "label": "Host color:",
-    "value": "#F0cF5F"
+    "value": "#FFFFFF"
   }, 
   "hostIcon": {
     "group": "HOSTS",
@@ -674,7 +680,7 @@
     "group": "RAIDS",
     "type": "colorpicker",
     "label": "Raid color:",
-    "value": "#Fc5FcF"
+    "value": "#FFFFFF"
   }, 
   "raidIcon": {
     "group": "RAIDS",
@@ -700,10 +706,6 @@
 
   "widgetName": {
     "type": "hidden",
-    "value": "Simple Stream HUD - Background"
-  },
-  "widgetDuration": {
-    "type": "hidden",
-    "value": 7
+    "value": "SimpleHUD 1.3.1"
   }
 }

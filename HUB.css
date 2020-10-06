@@ -44,11 +44,11 @@
 }
 
 .scale {
-  animation: scale 6.6s ease-in-out;
+  animation: scale {{widgetDuration}}s ease-in-out;
 }
 
 .pulse {
-  animation: pulse 6.6s ease-in-out;
+  animation: pulse {{widgetDuration}}s ease-in-out;
 }
 
 .name {
@@ -62,7 +62,7 @@
   height: 100%;
   display: flex;
   align-items: center;
-  animation: reveal 6.6s ease-in-out forwards;
+  animation: reveal {{widgetDuration}}s ease-in-out forwards;
   padding-left: {{iconMargin}}px;
 }
 

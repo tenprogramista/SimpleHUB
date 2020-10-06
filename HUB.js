@@ -1,11 +1,13 @@
-let userCurrency, userLocale = "{locale}";
+let userCurrency, userLocale = "{locale}", delay;
 
 // ON START
 
 window.addEventListener('onWidgetLoad', function (obj) {
   let data = obj.detail.session.data;
+  const field = obj.detail.fieldData;
   userCurrency = obj.detail.currency;
-  
+  delay = field.widgetDuration * 500;
+
   follower(data["follower-latest"]);
 });
 
@@ -50,7 +52,7 @@ function subscriber(data) {
         username.innerHTML = `${data.name} {communitySingleSuffix}`;
         icon.style.color = "{communityColor}";
         icon.innerHTML = "{subIcon}";
-      }, 3000);
+      }, delay);
 
       // ALERT
       dynamic.innerHTML = 
@@ -70,7 +72,7 @@ function subscriber(data) {
       username.innerHTML = `${data.sender} {communityMultipleSuffix} (x${data.amount})`;
       icon.style.color = "{communityColor}";
       icon.innerHTML = "{subIcon}";
-    }, 3000);
+    }, delay);
 
     // ALERT
     dynamic.innerHTML = 
@@ -95,7 +97,7 @@ function subscriber(data) {
       username.innerHTML = `${data.name} ({giftNote} ${data.sender})`;
       icon.style.color = "{giftColor}";
       icon.innerHTML = "{subIcon}";
-    }, 3000);
+    }, delay);
 
     // ALERT
     dynamic.innerHTML = 
@@ -115,7 +117,7 @@ function subscriber(data) {
       username.innerHTML = `${data.name} (x${data.amount})`;
       icon.style.color = "{subColor}";
       icon.innerHTML = "{subIcon}";
-    }, 3000);
+    }, delay);
 
     // ALERT
     dynamic.innerHTML = 
@@ -140,7 +142,7 @@ function follower(data) {
     username.innerHTML = `${data.name}`;
     icon.innerHTML = "{followIcon}";
     icon.style.color = "{followColor}";
-  }, 3000);
+  }, delay);
 
   // ALERT
   dynamic.innerHTML = 
@@ -163,7 +165,7 @@ function cheer(data) {
     username.innerHTML = `${data.name} (X${data.amount})`;
     icon.innerHTML = "{cheerIcon}";
     icon.style.color = "{cheerColor}";
-  }, 3000);
+  }, delay);
 
   // ALERT
   dynamic.innerHTML = 
@@ -187,7 +189,7 @@ function tip(data) {
     username.innerHTML = `${data.name} (${currency})`;
     icon.innerHTML = "{tipIcon}";
     icon.style.color = "{tipColor}";
-  }, 3000);
+  }, delay);
 
   // ALERT
   dynamic.innerHTML = 
@@ -210,7 +212,7 @@ function host(data) {
     username.innerHTML = `${data.name} (${data.amount})`;
     icon.innerHTML = "{hostIcon}";
     icon.style.color = "{hostColor}";
-  }, 3000);
+  }, delay);
 
   // ALERT
   dynamic.innerHTML = 
@@ -233,7 +235,7 @@ function raid(data) {
     username.innerHTML = `${data.name} (${data.amount})`;
     icon.innerHTML = "{raidIcon}";
     icon.style.color = "{raidColor}";
-  }, 3000);
+  }, delay);
 
   // ALERT
   dynamic.innerHTML = 

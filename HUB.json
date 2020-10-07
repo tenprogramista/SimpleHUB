@@ -447,6 +447,32 @@
     "label": "Alerts duration (s):",
     "value": 7
   },
+  "initialRecentEvent": {
+    "group": "BASIC SETTINGS",
+    "type": "dropdown",
+    "label": "Start event:",
+    "value": "follow-latest",
+    "options": {
+      "follower-latest": "Latest Follower",
+      "subscriber-latest": "Latest Subscriber",
+      "cheer-latest": "Latest Cheer",
+      "cheer-alltime-top-donation": "Alltime Top Cheer",
+      "cheer-monthly-top-donation": "Monthly Top Cheer",
+      "cheer-weekly-top-donation": "Weekly Top Cheer",
+      "cheer-alltime-top-donator": "Alltime Top Cheerer",
+      "cheer-monthly-top-donator": "Monthly Top Cheerer",
+      "cheer-weekly-top-donator": "Weekly Top Cheerer",
+      "tip": "Latest Donation",
+      "tip-alltime-top-donation": "Alltime Top Donation",
+      "tip-monthly-top-donation": "Monthly Top Donation",
+      "tip-weekly-top-donation": "Weekly Top Donation",
+      "tip-alltime-top-donator": "Alltime Top Donator",
+      "tip-monthly-top-donator": "Monthly Top Donator",
+      "tip-weekly-top-donator": "Weekly Top Donator",
+      "raid-latest": "Latest Raid",
+      "host-latest": "Latest Host"
+    }
+  },
   "showInitialAnimation": {
     "group": "BASIC SETTINGS",
     "type": "checkbox",
@@ -456,7 +482,7 @@
   "widgetName": {
     "group":"BASIC SETTINGS",
     "type": "hidden",
-    "value": "SimpleHUD 1.5"
+    "value": "SimpleHUB 1.5"
   },
   
   "animationName": {

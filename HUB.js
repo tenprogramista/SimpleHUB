@@ -9,7 +9,41 @@ window.addEventListener('onWidgetLoad', (obj) => {
   userLocale = field.locale;
   globalDelay = field.widgetDuration * 500;
 
-  follower(data["follower-latest"], field.showInitialAnimation);
+  switch (field.initialRecentEvent) {
+    case "follower-latest":
+      follower(data[field.initialRecentEvent], field.showInitialAnimation);
+      break;
+    case "subscriber-latest":
+      subscriber(data[field.initialRecentEvent], field.showInitialAnimation);
+      break;
+    case "cheer-latest":
+    case "cheer-alltime-top-donation":
+    case "cheer-monthly-top-donation":
+    case "cheer-weekly-top-donation":
+    case "cheer-alltime-top-donator":
+    case "cheer-monthly-top-donator":
+    case "cheer-weekly-top-donator":
+      cheer(data[field.initialRecentEvent], field.showInitialAnimation);
+      break;
+    case "tip-latest":
+    case "tip-alltime-top-donation":
+    case "tip-monthly-top-donation":
+    case "tip-weekly-top-donation":
+    case "tip-alltime-top-donator":
+    case "tip-monthly-top-donator":
+    case "tip-weekly-top-donator":
+      tip(data[field.initialRecentEvent], field.showInitialAnimation);
+      break;
+    case "raid-latest":
+      raid(data[field.initialRecentEvent], field.showInitialAnimation);
+      break;
+    case "host-latest":
+      host(data[field.initialRecentEvent], field.showInitialAnimation);
+      break;
+
+    default:
+      break;
+  }
 });
 
 // ON EVENT

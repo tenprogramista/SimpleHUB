@@ -469,13 +469,13 @@
     "group": "BASE APPEARANCE",
     "type": "colorpicker",
     "label": "Background color:",
-    "value": "#000000"
+    "value": "#F2F2F2"
   },
   "fontColor": {
     "group": "BASE APPEARANCE",
     "type": "colorpicker",
     "label": "Font color:",
-    "value": "#FFFFFF"
+    "value": "#000000"
   },
   "fontFamily": {
     "group": "BASE APPEARANCE",
@@ -530,7 +530,7 @@
     "group": "SUBS - GENERAL",
     "type": "colorpicker",
     "label": "Sub color:",
-    "value": "#FFFFFF"
+    "value": "#F2F2F2"
   },
   "subIcon": { 
     "group": "SUBS - GENERAL",
@@ -542,7 +542,7 @@
     "group":"SUBS - GENERAL",
     "type": "dropdown",
     "label": "Icon animation:",
-    "value": "scale",
+    "value": "rotate",
     "options": {
       "scale": "Scale",
       "pulse": "Pulse",
@@ -568,7 +568,7 @@
     "group": "SUBS - GIFTS",
     "type": "colorpicker",
     "label": "Gift color:",
-    "value": "#FFFFFF"
+    "value": "#F2F2F2"
   },
   "giftNote": {
     "group": "SUBS - GIFTS",
@@ -581,7 +581,7 @@
     "group": "SUBS - COMMUNITY",
     "type": "colorpicker",
     "label": "Community gift color:",
-    "value": "#FFFFFF"
+    "value": "#F2F2F2"
   },
   "communitySingleSuffix": {
     "group": "SUBS - COMMUNITY",
@@ -600,7 +600,7 @@
     "group": "FOLLOWS",
     "type": "colorpicker",
     "label": "Follow color:",
-    "value": "#FFFFFF"
+    "value": "#F2F2F2"
   },
   "followIcon": { 
     "group": "FOLLOWS",
@@ -612,7 +612,7 @@
     "group":"FOLLOWS",
     "type": "dropdown",
     "label": "Icon animation:",
-    "value": "scale",
+    "value": "pulse",
     "options": {
       "scale": "Scale",
       "pulse": "Pulse",
@@ -638,7 +638,7 @@
     "group": "CHEERS",
     "type": "colorpicker",
     "label": "Cheer color:",
-    "value": "#FFFFFF"
+    "value": "#F2F2F2"
   }, 
   "cheerIcon": { 
     "group": "CHEERS",
@@ -650,7 +650,7 @@
     "group":"CHEERS",
     "type": "dropdown",
     "label": "Icon animation:",
-    "value": "scale",
+    "value": "pulse",
     "options": {
       "scale": "Scale",
       "pulse": "Pulse",
@@ -676,7 +676,7 @@
     "group": "DONATIONS",
     "type": "colorpicker",
     "label": "Tip color:",
-    "value": "#FFFFFF"
+    "value": "#F2F2F2"
   }, 
   "tipIcon": {
     "group": "DONATIONS",
@@ -688,7 +688,7 @@
     "group":"DONATIONS",
     "type": "dropdown",
     "label": "Icon animation:",
-    "value": "scale",
+    "value": "pulse",
     "options": {
       "scale": "Scale",
       "pulse": "Pulse",
@@ -714,7 +714,7 @@
     "group": "HOSTS",
     "type": "colorpicker",
     "label": "Host color:",
-    "value": "#FFFFFF"
+    "value": "#F2F2F2"
   }, 
   "hostIcon": {
     "group": "HOSTS",
@@ -752,7 +752,7 @@
     "group": "RAIDS",
     "type": "colorpicker",
     "label": "Raid color:",
-    "value": "#FFFFFF"
+    "value": "#F2F2F2"
   }, 
   "raidIcon": {
     "group": "RAIDS",
@@ -789,6 +789,6 @@
 
   "widgetName": {
     "type": "hidden",
-    "value": "SimpleHUD 1.3.1"
+    "value": "SimpleHUD 1.4"
   }
 }

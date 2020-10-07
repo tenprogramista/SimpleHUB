@@ -448,6 +448,23 @@
     "value": 7
   },
   
+  "animationName": {
+    "group":"BASE APPEARANCE",
+    "type": "dropdown",
+    "label": "Alert animation:",
+    "value": "reveal-in-fade-out",
+    "options": {
+      "cut": "None",
+      "fade-in": "Fade In",
+      "fade-out": "Fade Out",
+      "fade-in-out": "Fade In, Fade Out",
+      "reveal-in": "Reveal In",
+      "reveal-out": "Reveal Out",
+      "reveal-in-out": "Reveal In, Reveal Out",
+      "reveal-in-fade-out": "Reveal In, Fade Out",
+      "fade-in-reveal-out": "Fade In, Reveal Out"
+    }
+  },
   "bgColor": {
     "group": "BASE APPEARANCE",
     "type": "colorpicker",

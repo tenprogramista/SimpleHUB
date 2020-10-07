@@ -538,6 +538,17 @@
     "label": "Sub Icon Name:",
     "value": "star"
   },
+  "subIconAnimation": {
+    "group":"SUBS - GENERAL",
+    "type": "dropdown",
+    "label": "Icon animation:",
+    "value": "scale",
+    "options": {
+      "scale": "Scale",
+      "pulse": "Pulse",
+      "rotate": "Rotate"
+    }
+  },
   "subAudio": {
     "group":"SUBS - GENERAL",
     "type": "sound-input",
@@ -597,6 +608,17 @@
     "label": "Fllow Icon Name:",
     "value": "favorite"
   },
+  "followIconAnimation": {
+    "group":"FOLLOWS",
+    "type": "dropdown",
+    "label": "Icon animation:",
+    "value": "scale",
+    "options": {
+      "scale": "Scale",
+      "pulse": "Pulse",
+      "rotate": "Rotate"
+    }
+  },
   "followAudio": {
     "group": "FOLLOWS",
     "type": "sound-input",
@@ -623,6 +645,17 @@
     "type": "text",
     "label": "Cheer Icon Name:",
     "value": "whatshot"
+  },
+  "cheerIconAnimation": {
+    "group":"CHEERS",
+    "type": "dropdown",
+    "label": "Icon animation:",
+    "value": "scale",
+    "options": {
+      "scale": "Scale",
+      "pulse": "Pulse",
+      "rotate": "Rotate"
+    }
   },
   "cheerAudio": {
     "group": "CHEERS",
@@ -651,6 +684,17 @@
     "label": "Donation Icon Name:",
     "value": "monetization_on"
   },
+  "tipIconAnimation": {
+    "group":"DONATIONS",
+    "type": "dropdown",
+    "label": "Icon animation:",
+    "value": "scale",
+    "options": {
+      "scale": "Scale",
+      "pulse": "Pulse",
+      "rotate": "Rotate"
+    }
+  },
   "tipAudio": {
     "group":"DONATIONS",
     "type": "sound-input",
@@ -678,6 +722,17 @@
     "label": "Host Icon Name:",
     "value": "tv"
   },
+  "hostIconAnimation": {
+    "group":"HOSTS",
+    "type": "dropdown",
+    "label": "Icon animation:",
+    "value": "scale",
+    "options": {
+      "scale": "Scale",
+      "pulse": "Pulse",
+      "rotate": "Rotate"
+    }
+  },
   "hostAudio": {
     "group":"HOSTS",
     "type": "sound-input",
@@ -704,6 +759,17 @@
     "type": "text",
     "label": "Raid Icon Name:",
     "value": "security"
+  },
+  "raidIconAnimation": {
+    "group":"RAIDS",
+    "type": "dropdown",
+    "label": "Icon animation:",
+    "value": "scale",
+    "options": {
+      "scale": "Scale",
+      "pulse": "Pulse",
+      "rotate": "Rotate"
+    }
   },
   "raidAudio": {
     "group":"RAIDS",

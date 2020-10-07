@@ -2,7 +2,7 @@ let userCurrency, userLocale = "{locale}", delay;
 
 // ON START
 
-window.addEventListener('onWidgetLoad', function (obj) {
+window.addEventListener('onWidgetLoad', (obj) => {
   let data = obj.detail.session.data;
   const field = obj.detail.fieldData;
   userCurrency = obj.detail.currency;
@@ -13,7 +13,7 @@ window.addEventListener('onWidgetLoad', function (obj) {
 
 // ON EVENT
 
-window.addEventListener('onEventReceived', function (obj) {
+window.addEventListener('onEventReceived', (obj) => {
   const listener = obj.detail.listener;
   const data = obj.detail.event;
   
@@ -57,7 +57,7 @@ function subscriber(data) {
       // ALERT
       dynamic.innerHTML = 
         `<div class="alert sub">
-        <i class="material-icons sized scale">{subIcon}</i>
+        <i class="material-icons sized {subIconAnimation}">{subIcon}</i>
         <audio id="audio" autoplay hidden src="{subAudio}></audio>
         <div class="name">${data.name} {communitySingleSuffix}</div>
         </div>`;
@@ -77,7 +77,7 @@ function subscriber(data) {
     // ALERT
     dynamic.innerHTML = 
       `<div class="alert sub">
-      <i class="material-icons sized scale">{subIcon}</i>
+      <i class="material-icons sized {subIconAnimation}">{subIcon}</i>
       <audio id="audio" autoplay hidden src="{subAudio}"></audio>
       <div class="name">${data.sender} {communityMultipleSuffix} (x${data.amount})</div>
       </div>`;
@@ -102,7 +102,7 @@ function subscriber(data) {
     // ALERT
     dynamic.innerHTML = 
       `<div class="alert sub">
-      <i class="material-icons sized scale">{subIcon}</i>
+      <i class="material-icons sized {subIconAnimation}">{subIcon}</i>
       <audio id="audio" autoplay hidden src="{subAudio}"></audio>
       <div class="name">${data.name} ({giftNote} ${data.sender})</div>
       </div>`;
@@ -122,7 +122,7 @@ function subscriber(data) {
     // ALERT
     dynamic.innerHTML = 
       `<div class="alert sub">
-      <i class="material-icons sized scale">{subIcon}</i>
+      <i class="material-icons sized {subIconAnimation}">{subIcon}</i>
       <audio id="audio" autoplay hidden src="{subAudio}"></audio>
       <div class="name">${data.name} (x${data.amount})</div>
       </div>`;
@@ -147,7 +147,7 @@ function follower(data) {
   // ALERT
   dynamic.innerHTML = 
   `<div class="alert follow">
-  <i class="material-icons sized pulse">{followIcon}</i>
+  <i class="material-icons sized {followIconAnimation}">{followIcon}</i>
   <audio id="audio" autoplay hidden src="{followAudio}"></audio>
   <div class="name">${data.name}</div>
   </div>`;
@@ -170,7 +170,7 @@ function cheer(data) {
   // ALERT
   dynamic.innerHTML = 
   `<div class="alert cheer">
-  <i class="material-icons sized pulse">{cheerIcon}</i>
+  <i class="material-icons sized {cheerIconAnimation}">{cheerIcon}</i>
   <audio id="audio" autoplay hidden src="{cheerAudio}"></audio>
   <div class="name">${data.name} (X${data.amount})</div>
   </div>`;
@@ -194,7 +194,7 @@ function tip(data) {
   // ALERT
   dynamic.innerHTML = 
   `<div class="alert tip">
-  <i class="material-icons sized scale">{tipIcon}</i>
+  <i class="material-icons sized {tipIconAnimation}">{tipIcon}</i>
   <audio id="audio" autoplay hidden src="{tipAudio}"></audio>
   <div class="name">${data.name} (${currency})</div>
   </div>`;
@@ -217,7 +217,7 @@ function host(data) {
   // ALERT
   dynamic.innerHTML = 
   `<div class="alert host">
-  <i class="material-icons sized scale">{hostIcon}</i>
+  <i class="material-icons sized {hostIconAnimation}">{hostIcon}</i>
   <audio id="audio" autoplay hidden src="{hostAudio}"></audio>
   <div class="name">${data.name} (${data.amount})</div>
   </div>`;
@@ -240,7 +240,7 @@ function raid(data) {
   // ALERT
   dynamic.innerHTML = 
   `<div class="alert raid">
-  <i class="material-icons sized scale">{raidIcon}</i>
+  <i class="material-icons sized {raidIconAnimation}">{raidIcon}</i>
   <audio id="audio" autoplay hidden src="{raidAudio}"></audio>
   <div class="name">${data.name} (${data.amount})</div>
   </div>`;

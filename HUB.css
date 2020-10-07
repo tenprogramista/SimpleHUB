@@ -43,14 +43,6 @@
   font-size: {{iconSize}}px;
 }
 
-.scale {
-  animation: scale {{widgetDuration}}s ease-in-out;
-}
-
-.pulse {
-  animation: pulse {{widgetDuration}}s ease-in-out;
-}
-
 .name {
   margin-left: {{nameMargin}}px;
   line-height: {{fontSize}}px;
@@ -102,30 +94,48 @@
 
 /* ICON ANIMATIONS */
 
+.scale {
+  animation: scale {{widgetDuration}}s ease-in-out;
+}
+
+.pulse {
+  animation: pulse {{widgetDuration}}s ease-in-out;
+}
+
+.rotate {
+  animation: rotate {{widgetDuration}}s linear;
+}
+
+@keyframes rotate {
+  0%   { transform: rotate(0deg);   }
+  88%  { transform: rotate(720deg); }
+  100% { transform: rotate(720deg); }
+}
+
 @keyframes scale {
-  0%   { transform: scale(1); }
-  8%   { transform: scale(1); }
+  0%   { transform: scale(1);   }
+  8%   { transform: scale(1);   }
   85%  { transform: scale(1.4); }
-  92%  { transform: scale(1); }
+  92%  { transform: scale(1);   }
 }
 
 @keyframes pulse {
-  0%   { transform: scale(1); }
+  0%   { transform: scale(1);    }
   5%   { transform: scale(1.15); }
-  10%  { transform: scale(1); }
-  20%  { transform: scale(1); }
+  10%  { transform: scale(1);    }
+  20%  { transform: scale(1);    }
   25%  { transform: scale(1.15); }
-  30%  { transform: scale(1); }
-  40%  { transform: scale(1); }
+  30%  { transform: scale(1);    }
+  40%  { transform: scale(1);    }
   45%  { transform: scale(1.15); }
-  50%  { transform: scale(1); }
-  60%  { transform: scale(1); }
+  50%  { transform: scale(1);    }
+  60%  { transform: scale(1);    }
   65%  { transform: scale(1.15); }
-  70%  { transform: scale(1); }
-  80%  { transform: scale(1); }
+  70%  { transform: scale(1);    }
+  80%  { transform: scale(1);    }
   85%  { transform: scale(1.15); }
-  90%  { transform: scale(1); }
-  100% { transform: scale(1); }
+  90%  { transform: scale(1);    }
+  100% { transform: scale(1);    }
 }
 
 /* ALERT ANIMATIONS */

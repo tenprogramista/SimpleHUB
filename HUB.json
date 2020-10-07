@@ -545,7 +545,8 @@
     "value": "scale",
     "options": {
       "scale": "Scale",
-      "pulse": "Pulse"
+      "pulse": "Pulse",
+      "rotate": "Rotate"
     }
   },
   "subAudio": {
@@ -614,7 +615,8 @@
     "value": "scale",
     "options": {
       "scale": "Scale",
-      "pulse": "Pulse"
+      "pulse": "Pulse",
+      "rotate": "Rotate"
     }
   },
   "followAudio": {
@@ -651,7 +653,8 @@
     "value": "scale",
     "options": {
       "scale": "Scale",
-      "pulse": "Pulse"
+      "pulse": "Pulse",
+      "rotate": "Rotate"
     }
   },
   "cheerAudio": {
@@ -688,7 +691,8 @@
     "value": "scale",
     "options": {
       "scale": "Scale",
-      "pulse": "Pulse"
+      "pulse": "Pulse",
+      "rotate": "Rotate"
     }
   },
   "tipAudio": {
@@ -725,7 +729,8 @@
     "value": "scale",
     "options": {
       "scale": "Scale",
-      "pulse": "Pulse"
+      "pulse": "Pulse",
+      "rotate": "Rotate"
     }
   },
   "hostAudio": {
@@ -762,7 +767,8 @@
     "value": "scale",
     "options": {
       "scale": "Scale",
-      "pulse": "Pulse"
+      "pulse": "Pulse",
+      "rotate": "Rotate"
     }
   },
   "raidAudio": {

@@ -1,11 +1,12 @@
-let userCurrency, userLocale = "{locale}", delay;
+let field, userCurrency, userLocale, delay;
 
 // ON START
 
 window.addEventListener('onWidgetLoad', (obj) => {
   let data = obj.detail.session.data;
-  const field = obj.detail.fieldData;
+  field = obj.detail.fieldData;
   userCurrency = obj.detail.currency;
+  userLocale = field.locale;
   delay = field.widgetDuration * 500;
 
   follower(data["follower-latest"]);
@@ -49,40 +50,40 @@ function subscriber(data) {
       
       // HUB
       setTimeout(() => {
-        username.innerHTML = `${data.name} {communitySingleSuffix}`;
-        icon.style.color = "{communityColor}";
-        icon.innerHTML = "{subIcon}";
+        username.innerHTML = `${data.name} ${field.communitySingleSuffix}`;
+        icon.style.color = `${field.communityColor}`;
+        icon.innerHTML = `${field.subIcon}`;
       }, delay);
 
       // ALERT
       dynamic.innerHTML = 
         `<div class="alert sub">
-        <i class="material-icons sized {subIconAnimation}">{subIcon}</i>
-        <audio id="audio" autoplay hidden src="{subAudio}></audio>
-        <div class="name">${data.name} {communitySingleSuffix}</div>
+        <i class="material-icons sized ${field.subIconAnimation}">${field.subIcon}</i>
+        <audio id="audio" autoplay hidden src="${field.subAudio}></audio>
+        <div class="name">${data.name} ${field.communitySingleSuffix}</div>
         </div>`;
 
 
-      document.getElementById('audio').volume = {subVolume};
+      document.getElementById('audio').volume = field.subVolume;
       return;
     }
 
     // HUB
     setTimeout(() => {
-      username.innerHTML = `${data.sender} {communityMultipleSuffix} (x${data.amount})`;
-      icon.style.color = "{communityColor}";
-      icon.innerHTML = "{subIcon}";
+      username.innerHTML = `${data.sender} ${field.communityMultipleSuffix} (x${data.amount})`;
+      icon.style.color = `${field.communityColor}`;
+      icon.innerHTML = `${field.subIcon}`;
     }, delay);
 
     // ALERT
     dynamic.innerHTML = 
       `<div class="alert sub">
-      <i class="material-icons sized {subIconAnimation}">{subIcon}</i>
-      <audio id="audio" autoplay hidden src="{subAudio}"></audio>
-      <div class="name">${data.sender} {communityMultipleSuffix} (x${data.amount})</div>
+      <i class="material-icons sized ${field.subIconAnimation}">${field.subIcon}</i>
+      <audio id="audio" autoplay hidden src="${field.subAudio}"></audio>
+      <div class="name">${data.sender} ${field.communityMultipleSuffix} (x${data.amount})</div>
       </div>`;
 
-      document.getElementById('audio').volume = {subVolume};
+      document.getElementById('audio').volume = field.subVolume;
   }
 
   else if (data.gifted === true) {
@@ -94,20 +95,20 @@ function subscriber(data) {
 
     // HUB
     setTimeout(() => {
-      username.innerHTML = `${data.name} ({giftNote} ${data.sender})`;
-      icon.style.color = "{giftColor}";
-      icon.innerHTML = "{subIcon}";
+      username.innerHTML = `${data.name} (${field.giftNote} ${data.sender})`;
+      icon.style.color = `${field.giftColor}`;
+      icon.innerHTML = `${field.subIcon}`;
     }, delay);
 
     // ALERT
     dynamic.innerHTML = 
       `<div class="alert sub">
-      <i class="material-icons sized {subIconAnimation}">{subIcon}</i>
-      <audio id="audio" autoplay hidden src="{subAudio}"></audio>
-      <div class="name">${data.name} ({giftNote} ${data.sender})</div>
+      <i class="material-icons sized ${field.subIconAnimation}">${field.subIcon}</i>
+      <audio id="audio" autoplay hidden src="${field.subAudio}"></audio>
+      <div class="name">${data.name} (${field.giftNote} ${data.sender})</div>
       </div>`;
 
-      document.getElementById('audio').volume = {subVolume};
+      document.getElementById('audio').volume = field.subVolume;
   } 
 
   else {
@@ -115,19 +116,19 @@ function subscriber(data) {
     // HUB
     setTimeout(() => {
       username.innerHTML = `${data.name} (x${data.amount})`;
-      icon.style.color = "{subColor}";
-      icon.innerHTML = "{subIcon}";
+      icon.style.color = `${field.subColor}`;
+      icon.innerHTML = `${field.subIcon}`;
     }, delay);
 
     // ALERT
     dynamic.innerHTML = 
       `<div class="alert sub">
-      <i class="material-icons sized {subIconAnimation}">{subIcon}</i>
-      <audio id="audio" autoplay hidden src="{subAudio}"></audio>
+      <i class="material-icons sized ${field.subIconAnimation}">${field.subIcon}</i>
+      <audio id="audio" autoplay hidden src="${field.subAudio}"></audio>
       <div class="name">${data.name} (x${data.amount})</div>
       </div>`;
 
-      document.getElementById('audio').volume = {subVolume};
+      document.getElementById('audio').volume = field.subVolume;
   }
 }
 
@@ -140,19 +141,19 @@ function follower(data) {
   // HUB
   setTimeout(() => {
     username.innerHTML = `${data.name}`;
-    icon.innerHTML = "{followIcon}";
-    icon.style.color = "{followColor}";
+    icon.innerHTML = `${field.followIcon}`;
+    icon.style.color = `${field.followColor}`;
   }, delay);
 
   // ALERT
   dynamic.innerHTML = 
   `<div class="alert follow">
-  <i class="material-icons sized {followIconAnimation}">{followIcon}</i>
-  <audio id="audio" autoplay hidden src="{followAudio}"></audio>
+  <i class="material-icons sized ${field.followIconAnimation}">${field.followIcon}</i>
+  <audio id="audio" autoplay hidden src="${field.followAudio}"></audio>
   <div class="name">${data.name}</div>
   </div>`;
 
-  document.getElementById('audio').volume = {followVolume};
+  document.getElementById('audio').volume = field.followVolume;
 }
 
 // CHEER
@@ -163,19 +164,19 @@ function cheer(data) {
   // HUB
   setTimeout(() => {
     username.innerHTML = `${data.name} (X${data.amount})`;
-    icon.innerHTML = "{cheerIcon}";
-    icon.style.color = "{cheerColor}";
+    icon.innerHTML = `${field.cheerIcon}`;
+    icon.style.color = `${field.cheerColor}`;
   }, delay);
 
   // ALERT
   dynamic.innerHTML = 
   `<div class="alert cheer">
-  <i class="material-icons sized {cheerIconAnimation}">{cheerIcon}</i>
-  <audio id="audio" autoplay hidden src="{cheerAudio}"></audio>
+  <i class="material-icons sized ${field.cheerIconAnimation}">${field.cheerIcon}</i>
+  <audio id="audio" autoplay hidden src="${field.cheerAudio}"></audio>
   <div class="name">${data.name} (X${data.amount})</div>
   </div>`;
 
-  document.getElementById('audio').volume = {cheerVolume};
+  document.getElementById('audio').volume = field.cheerVolume;
 }
 
 // TIP
@@ -187,19 +188,19 @@ function tip(data) {
   // HUB
   setTimeout(() => {
     username.innerHTML = `${data.name} (${currency})`;
-    icon.innerHTML = "{tipIcon}";
-    icon.style.color = "{tipColor}";
+    icon.innerHTML = `${field.tipIcon}`;
+    icon.style.color = `${field.tipColor}`;
   }, delay);
 
   // ALERT
   dynamic.innerHTML = 
   `<div class="alert tip">
-  <i class="material-icons sized {tipIconAnimation}">{tipIcon}</i>
-  <audio id="audio" autoplay hidden src="{tipAudio}"></audio>
+  <i class="material-icons sized ${field.tipIconAnimation}">${field.tipIcon}</i>
+  <audio id="audio" autoplay hidden src="${field.tipAudio}"></audio>
   <div class="name">${data.name} (${currency})</div>
   </div>`;
 
-  document.getElementById('audio').volume = {tipVolume};
+  document.getElementById('audio').volume = field.tipVolume;
 }
 
 // HOST
@@ -210,19 +211,19 @@ function host(data) {
   // HUB
   setTimeout(() => {
     username.innerHTML = `${data.name} (${data.amount})`;
-    icon.innerHTML = "{hostIcon}";
-    icon.style.color = "{hostColor}";
+    icon.innerHTML = `${field.hostIcon}`;
+    icon.style.color = `${field.hostColor}`;
   }, delay);
 
   // ALERT
   dynamic.innerHTML = 
   `<div class="alert host">
-  <i class="material-icons sized {hostIconAnimation}">{hostIcon}</i>
-  <audio id="audio" autoplay hidden src="{hostAudio}"></audio>
+  <i class="material-icons sized ${field.hostIconAnimation}">${field.hostIcon}</i>
+  <audio id="audio" autoplay hidden src="${field.hostAudio}"></audio>
   <div class="name">${data.name} (${data.amount})</div>
   </div>`;
 
-  document.getElementById('audio').volume = {hostVolume};
+  document.getElementById('audio').volume = field.hostVolume;
 }
 
 // RAID
@@ -233,17 +234,17 @@ function raid(data) {
   // HUB
   setTimeout(() => {
     username.innerHTML = `${data.name} (${data.amount})`;
-    icon.innerHTML = "{raidIcon}";
-    icon.style.color = "{raidColor}";
+    icon.innerHTML = `${field.raidIcon}`;
+    icon.style.color = `${field.raidColor}`;
   }, delay);
 
   // ALERT
   dynamic.innerHTML = 
   `<div class="alert raid">
-  <i class="material-icons sized {raidIconAnimation}">{raidIcon}</i>
-  <audio id="audio" autoplay hidden src="{raidAudio}"></audio>
+  <i class="material-icons sized ${field.raidIconAnimation}">${field.raidIcon}</i>
+  <audio id="audio" autoplay hidden src="${field.raidAudio}"></audio>
   <div class="name">${data.name} (${data.amount})</div>
   </div>`;
 
-  document.getElementById('audio').volume = {raidVolume};
+  document.getElementById('audio').volume = field.raidVolume;
 }

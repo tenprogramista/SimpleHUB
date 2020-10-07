@@ -447,6 +447,17 @@
     "label": "Alerts duration (s):",
     "value": 7
   },
+  "showInitialAnimation": {
+    "group": "BASIC SETTINGS",
+    "type": "checkbox",
+    "label": "Show initial alert animation?",
+    "value": false
+  },
+  "widgetName": {
+    "group":"BASIC SETTINGS",
+    "type": "hidden",
+    "value": "SimpleHUD 1.5"
+  },
   
   "animationName": {
     "group":"BASE APPEARANCE",
@@ -526,6 +537,12 @@
     "value": 12
   },
 
+  "showSubAlert": {
+    "group": "SUBS - GENERAL",
+    "type":"checkbox",
+    "label": "Display Alert?",
+    "value": true
+  },
   "subColor": {
     "group": "SUBS - GENERAL",
     "type": "colorpicker",
@@ -596,6 +613,12 @@
     "value": "gifted subs"
   },
 
+  "showFollowAlert": {
+    "group": "FOLLOWS",
+    "type":"checkbox",
+    "label": "Display Alert?",
+    "value": true
+  },
   "followColor": {
     "group": "FOLLOWS",
     "type": "colorpicker",
@@ -634,6 +657,12 @@
     "step": 0.02
   },
 
+  "showCheerAlert": {
+    "group": "CHEERS",
+    "type":"checkbox",
+    "label": "Display Alert?",
+    "value": true
+  },
   "cheerColor": {
     "group": "CHEERS",
     "type": "colorpicker",
@@ -672,6 +701,12 @@
     "step": 0.02
   },
 
+  "showTipAlert": {
+    "group":"DONATIONS",
+    "type":"checkbox",
+    "label": "Display Alert?",
+    "value": true
+  },
   "tipColor": {
     "group": "DONATIONS",
     "type": "colorpicker",
@@ -710,6 +745,12 @@
     "step": 0.02
   },
   
+  "showHostAlert": {
+    "group": "HOSTS",
+    "type":"checkbox",
+    "label": "Display Alert?",
+    "value": true
+  },
   "hostColor": {
     "group": "HOSTS",
     "type": "colorpicker",
@@ -748,6 +789,12 @@
     "step": 0.02
   },
 
+  "showRaidAlert": {
+    "group": "RAIDS",
+    "type":"checkbox",
+    "label": "Display Alert?",
+    "value": true
+  },
   "raidColor": {
     "group": "RAIDS",
     "type": "colorpicker",
@@ -784,11 +831,5 @@
     "min": 0,
     "max": 1,
     "step": 0.02
-  },
-
-
-  "widgetName": {
-    "type": "hidden",
-    "value": "SimpleHUD 1.3.1"
   }
 }

@@ -62,8 +62,12 @@
   height: 100%;
   display: flex;
   align-items: center;
-  animation: reveal {{widgetDuration}}s ease-in-out forwards;
   padding-left: {{iconMargin}}px;
+  /* HIDDEN BEFORE AND AFTER ANIMATION */
+  opacity: 0;
+  clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+  /* ANIMATION */
+  animation: {{animationName}} {{widgetDuration}}s ease-in-out;
 }
 
 .alert.sub {
@@ -96,6 +100,8 @@
   color: {{bgColor}};
 }
 
+/* ICON ANIMATIONS */
+
 @keyframes scale {
   0%   { transform: scale(1); }
   8%   { transform: scale(1); }
@@ -105,26 +111,71 @@
 
 @keyframes pulse {
   0%   { transform: scale(1); }
-  4%   { transform: scale(1.15); }
-  8%   { transform: scale(1); }
-  19%  { transform: scale(1); }
-  23%  { transform: scale(1.2); }
-  27%  { transform: scale(1); }
-  38%  { transform: scale(1); }
-  42%  { transform: scale(1.15); }
-  46%  { transform: scale(1); }
-  57%  { transform: scale(1); }
-  61%  { transform: scale(1.1); }
-  65%  { transform: scale(1); }
-  76%  { transform: scale(1); }
-  80%  { transform: scale(1.05); }
-  84%  { transform: scale(1); }
+  5%   { transform: scale(1.15); }
+  10%  { transform: scale(1); }
+  20%  { transform: scale(1); }
+  25%  { transform: scale(1.15); }
+  30%  { transform: scale(1); }
+  40%  { transform: scale(1); }
+  45%  { transform: scale(1.15); }
+  50%  { transform: scale(1); }
+  60%  { transform: scale(1); }
+  65%  { transform: scale(1.15); }
+  70%  { transform: scale(1); }
+  80%  { transform: scale(1); }
+  85%  { transform: scale(1.15); }
+  90%  { transform: scale(1); }
   100% { transform: scale(1); }
 }
 
-@keyframes reveal {
-  0%   { clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%); }
-  9%   { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }
-  91%  { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }
-  100% { clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%); }
+/* ALERT ANIMATIONS */
+
+@keyframes cut {
+  0%   { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity: 1; }
+  100% { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity: 1; }
+}
+
+@keyframes fade-in {
+  0%   { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity: 0; }
+  12%  { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity: 1; }
+  100% { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity: 1; }
+}
+
+@keyframes fade-out {
+  0%   { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity: 1; }
+  88%  { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity: 1; }
+  100% { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity: 0; }
+}
+
+@keyframes fade-in-out {
+  0%   { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity: 0; }
+  12%  { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity: 1; }
+  88%  { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity: 1; }
+  100% { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity: 0; }
+}
+
+@keyframes reveal-in {
+  0%   { clip-path: polygon(0% 0%, 0%   0%, 0%   100%, 0% 100%); opacity: 1; }
+  9%   { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity: 1; }
+  100% { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity: 1; }
+}
+
+@keyframes reveal-out {
+  0%   { clip-path: polygon(0%   0%, 100% 0%, 100% 100%, 0%   100%); opacity: 1; }
+  91%  { clip-path: polygon(0%   0%, 100% 0%, 100% 100%, 0%   100%); opacity: 1; }
+  100% { clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%); opacity: 1; }
+}
+
+@keyframes reveal-in-out {
+  0%   { clip-path: polygon(0%   0%, 0%   0%, 0%   100%, 0%   100%); opacity: 1; }
+  9%   { clip-path: polygon(0%   0%, 100% 0%, 100% 100%, 0%   100%); opacity: 1; }
+  91%  { clip-path: polygon(0%   0%, 100% 0%, 100% 100%, 0%   100%); opacity: 1; }
+  100% { clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%); opacity: 1; }
+}
+
+@keyframes reveal-in-fade-out {
+  0%   { clip-path: polygon(0% 0%, 0%   0%, 0%   100%, 0% 100%); opacity: 1; }
+  9%   { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity: 1; }
+  88%  { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity: 1; }
+  100% { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity: 0; }
 }

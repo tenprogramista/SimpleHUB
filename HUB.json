@@ -858,10 +858,4 @@
     "max": 1,
     "step": 0.02
   }
-
-
-  "widgetName": {
-    "type": "hidden",
-    "value": "SimpleHUD 1.4"
-  }
 }

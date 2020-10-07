@@ -447,6 +447,43 @@
     "label": "Alerts duration (s):",
     "value": 7
   },
+  "initialRecentEvent": {
+    "group": "BASIC SETTINGS",
+    "type": "dropdown",
+    "label": "Start event:",
+    "value": "follow-latest",
+    "options": {
+      "follower-latest": "Latest Follower",
+      "subscriber-latest": "Latest Subscriber",
+      "cheer-latest": "Latest Cheer",
+      "cheer-alltime-top-donation": "Alltime Top Cheer",
+      "cheer-monthly-top-donation": "Monthly Top Cheer",
+      "cheer-weekly-top-donation": "Weekly Top Cheer",
+      "cheer-alltime-top-donator": "Alltime Top Cheerer",
+      "cheer-monthly-top-donator": "Monthly Top Cheerer",
+      "cheer-weekly-top-donator": "Weekly Top Cheerer",
+      "tip": "Latest Donation",
+      "tip-alltime-top-donation": "Alltime Top Donation",
+      "tip-monthly-top-donation": "Monthly Top Donation",
+      "tip-weekly-top-donation": "Weekly Top Donation",
+      "tip-alltime-top-donator": "Alltime Top Donator",
+      "tip-monthly-top-donator": "Monthly Top Donator",
+      "tip-weekly-top-donator": "Weekly Top Donator",
+      "raid-latest": "Latest Raid",
+      "host-latest": "Latest Host"
+    }
+  },
+  "showInitialAnimation": {
+    "group": "BASIC SETTINGS",
+    "type": "checkbox",
+    "label": "Show initial alert animation?",
+    "value": false
+  },
+  "widgetName": {
+    "group":"BASIC SETTINGS",
+    "type": "hidden",
+    "value": "SimpleHUB 1.5"
+  },
   
   "animationName": {
     "group":"BASE APPEARANCE",
@@ -526,6 +563,12 @@
     "value": 12
   },
 
+  "showSubAlert": {
+    "group": "SUBS - GENERAL",
+    "type":"checkbox",
+    "label": "Display Alert?",
+    "value": true
+  },
   "subColor": {
     "group": "SUBS - GENERAL",
     "type": "colorpicker",
@@ -596,6 +639,12 @@
     "value": "gifted subs"
   },
 
+  "showFollowAlert": {
+    "group": "FOLLOWS",
+    "type":"checkbox",
+    "label": "Display Alert?",
+    "value": true
+  },
   "followColor": {
     "group": "FOLLOWS",
     "type": "colorpicker",
@@ -634,6 +683,12 @@
     "step": 0.02
   },
 
+  "showCheerAlert": {
+    "group": "CHEERS",
+    "type":"checkbox",
+    "label": "Display Alert?",
+    "value": true
+  },
   "cheerColor": {
     "group": "CHEERS",
     "type": "colorpicker",
@@ -672,6 +727,12 @@
     "step": 0.02
   },
 
+  "showTipAlert": {
+    "group":"DONATIONS",
+    "type":"checkbox",
+    "label": "Display Alert?",
+    "value": true
+  },
   "tipColor": {
     "group": "DONATIONS",
     "type": "colorpicker",
@@ -710,6 +771,12 @@
     "step": 0.02
   },
   
+  "showHostAlert": {
+    "group": "HOSTS",
+    "type":"checkbox",
+    "label": "Display Alert?",
+    "value": true
+  },
   "hostColor": {
     "group": "HOSTS",
     "type": "colorpicker",
@@ -748,6 +815,12 @@
     "step": 0.02
   },
 
+  "showRaidAlert": {
+    "group": "RAIDS",
+    "type":"checkbox",
+    "label": "Display Alert?",
+    "value": true
+  },
   "raidColor": {
     "group": "RAIDS",
     "type": "colorpicker",
@@ -784,11 +857,5 @@
     "min": 0,
     "max": 1,
     "step": 0.02
-  },
-
-
-  "widgetName": {
-    "type": "hidden",
-    "value": "SimpleHUD 1.4"
   }
 }

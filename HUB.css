@@ -106,6 +106,10 @@
   animation: rotate {{widgetDuration}}s linear;
 }
 
+.stamp {
+  animation: stamp {{widgetDuration}}s linear;
+}
+
 @keyframes rotate {
   0%   { transform: rotate(0deg);   }
   88%  { transform: rotate(720deg); }
@@ -117,6 +121,12 @@
   8%   { transform: scale(1);   }
   85%  { transform: scale(1.4); }
   92%  { transform: scale(1);   }
+}
+
+@keyframes stamp {
+  0%   { transform: scale(8);   }
+  5%   { transform: scale(1);   }
+  100% { transform: scale(1);   }
 }
 
 @keyframes pulse {
@@ -188,4 +198,11 @@
   9%   { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity: 1; }
   88%  { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity: 1; }
   100% { clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); opacity: 0; }
+}
+
+@keyframes fade-in-reveal-out {
+  0%   { clip-path: polygon(0%   0%, 100% 0%, 100% 100%, 0%   100%); opacity: 0; }
+  12%  { clip-path: polygon(0%   0%, 100% 0%, 100% 100%, 0%   100%); opacity: 1; }
+  91%  { clip-path: polygon(0%   0%, 100% 0%, 100% 100%, 0%   100%); opacity: 1; }
+  100% { clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%); opacity: 1; }
 }

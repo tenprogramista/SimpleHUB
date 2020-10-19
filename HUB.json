@@ -575,6 +575,16 @@
     "label": "Sub color:",
     "value": "#F2F2F2"
   },
+  "subFontSource": {
+    "group": "SUBS - GENERAL",
+    "type": "dropdown",
+    "label": "Icon Source:",
+    "value": "",
+    "options": {
+      "material-icons" : "Material Icons",
+      "font-awesome": "FontAwesome"
+    }
+  },
   "subIcon": { 
     "group": "SUBS - GENERAL",
     "type": "text",
@@ -652,6 +662,16 @@
     "label": "Follow color:",
     "value": "#F2F2F2"
   },
+  "followFontSource": {
+    "group": "FOLLOWS",
+    "type": "dropdown",
+    "label": "Icon Source:",
+    "value": "",
+    "options": {
+      "material-icons" : "Material Icons",
+      "font-awesome": "FontAwesome"
+    }
+  },
   "followIcon": { 
     "group": "FOLLOWS",
     "type": "text",
@@ -697,6 +717,16 @@
     "label": "Cheer color:",
     "value": "#F2F2F2"
   }, 
+  "cheerFontSource": {
+    "group": "CHEERS",
+    "type": "dropdown",
+    "label": "Icon Source:",
+    "value": "",
+    "options": {
+      "material-icons" : "Material Icons",
+      "font-awesome": "FontAwesome"
+    }
+  },
   "cheerIcon": { 
     "group": "CHEERS",
     "type": "text",
@@ -741,7 +771,17 @@
     "type": "colorpicker",
     "label": "Tip color:",
     "value": "#F2F2F2"
-  }, 
+  },
+  "tipFontSource": {
+    "group": "DONATIONS",
+    "type": "dropdown",
+    "label": "Icon Source:",
+    "value": "",
+    "options": {
+      "material-icons" : "Material Icons",
+      "font-awesome": "FontAwesome"
+    }
+  },
   "tipIcon": {
     "group": "DONATIONS",
     "type": "text",
@@ -787,6 +827,16 @@
     "label": "Host color:",
     "value": "#F2F2F2"
   }, 
+  "hostFontSource": {
+    "group": "HOSTS",
+    "type": "dropdown",
+    "label": "Icon Source:",
+    "value": "",
+    "options": {
+      "material-icons" : "Material Icons",
+      "font-awesome": "FontAwesome"
+    }
+  },
   "hostIcon": {
     "group": "HOSTS",
     "type": "text",
@@ -832,6 +882,16 @@
     "label": "Raid color:",
     "value": "#F2F2F2"
   }, 
+  "raidFontSource": {
+    "group": "RAIDS",
+    "type": "dropdown",
+    "label": "Icon Source:",
+    "value": "",
+    "options": {
+      "material-icons" : "Material Icons",
+      "font-awesome": "FontAwesome"
+    }
+  },
   "raidIcon": {
     "group": "RAIDS",
     "type": "text",

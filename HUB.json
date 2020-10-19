@@ -482,7 +482,12 @@
   "widgetName": {
     "group":"BASIC SETTINGS",
     "type": "hidden",
-    "value": "SimpleHUB 1.5"
+    "value": "SimpleHUB 1.6"
+  },
+  "widgetAuthor": {
+    "group":"BASIC SETTINGS",
+    "type": "hidden",
+    "value": "Krzysztof \"TenSzop\" Gocek"
   },
   
   "animationName": {
@@ -506,13 +511,13 @@
     "group": "BASE APPEARANCE",
     "type": "colorpicker",
     "label": "Background color:",
-    "value": "#F2F2F2"
+    "value": "#F0F0FF"
   },
   "fontColor": {
     "group": "BASE APPEARANCE",
     "type": "colorpicker",
     "label": "Font color:",
-    "value": "#000000"
+    "value": "#000010"
   },
   "fontFamily": {
     "group": "BASE APPEARANCE",
@@ -573,7 +578,17 @@
     "group": "SUBS - GENERAL",
     "type": "colorpicker",
     "label": "Sub color:",
-    "value": "#F2F2F2"
+    "value": "#001010"
+  },
+  "subFontSource": {
+    "group": "SUBS - GENERAL",
+    "type": "dropdown",
+    "label": "Icon Source:",
+    "value": "material-icons",
+    "options": {
+      "material-icons" : "Material Icons",
+      "font-awesome": "FontAwesome"
+    }
   },
   "subIcon": { 
     "group": "SUBS - GENERAL",
@@ -612,7 +627,7 @@
     "group": "SUBS - GIFTS",
     "type": "colorpicker",
     "label": "Gift color:",
-    "value": "#F2F2F2"
+    "value": "#001010"
   },
   "giftNote": {
     "group": "SUBS - GIFTS",
@@ -625,7 +640,7 @@
     "group": "SUBS - COMMUNITY",
     "type": "colorpicker",
     "label": "Community gift color:",
-    "value": "#F2F2F2"
+    "value": "#001010"
   },
   "communitySingleSuffix": {
     "group": "SUBS - COMMUNITY",
@@ -650,7 +665,17 @@
     "group": "FOLLOWS",
     "type": "colorpicker",
     "label": "Follow color:",
-    "value": "#F2F2F2"
+    "value": "#001010"
+  },
+  "followFontSource": {
+    "group": "FOLLOWS",
+    "type": "dropdown",
+    "label": "Icon Source:",
+    "value": "material-icons",
+    "options": {
+      "material-icons" : "Material Icons",
+      "font-awesome": "FontAwesome"
+    }
   },
   "followIcon": { 
     "group": "FOLLOWS",
@@ -695,8 +720,18 @@
     "group": "CHEERS",
     "type": "colorpicker",
     "label": "Cheer color:",
-    "value": "#F2F2F2"
+    "value": "#001010"
   }, 
+  "cheerFontSource": {
+    "group": "CHEERS",
+    "type": "dropdown",
+    "label": "Icon Source:",
+    "value": "material-icons",
+    "options": {
+      "material-icons" : "Material Icons",
+      "font-awesome": "FontAwesome"
+    }
+  },
   "cheerIcon": { 
     "group": "CHEERS",
     "type": "text",
@@ -740,8 +775,18 @@
     "group": "DONATIONS",
     "type": "colorpicker",
     "label": "Tip color:",
-    "value": "#F2F2F2"
-  }, 
+    "value": "#001010"
+  },
+  "tipFontSource": {
+    "group": "DONATIONS",
+    "type": "dropdown",
+    "label": "Icon Source:",
+    "value": "material-icons",
+    "options": {
+      "material-icons" : "Material Icons",
+      "font-awesome": "FontAwesome"
+    }
+  },
   "tipIcon": {
     "group": "DONATIONS",
     "type": "text",
@@ -785,8 +830,18 @@
     "group": "HOSTS",
     "type": "colorpicker",
     "label": "Host color:",
-    "value": "#F2F2F2"
+    "value": "#001010"
   }, 
+  "hostFontSource": {
+    "group": "HOSTS",
+    "type": "dropdown",
+    "label": "Icon Source:",
+    "value": "material-icons",
+    "options": {
+      "material-icons" : "Material Icons",
+      "font-awesome": "FontAwesome"
+    }
+  },
   "hostIcon": {
     "group": "HOSTS",
     "type": "text",
@@ -830,8 +885,18 @@
     "group": "RAIDS",
     "type": "colorpicker",
     "label": "Raid color:",
-    "value": "#F2F2F2"
+    "value": "#001010"
   }, 
+  "raidFontSource": {
+    "group": "RAIDS",
+    "type": "dropdown",
+    "label": "Icon Source:",
+    "value": "material-icons",
+    "options": {
+      "material-icons" : "Material Icons",
+      "font-awesome": "FontAwesome"
+    }
+  },
   "raidIcon": {
     "group": "RAIDS",
     "type": "text",

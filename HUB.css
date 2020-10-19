@@ -34,7 +34,7 @@
   background-color: transparent;
 }
 
-.material-icons.sized {
+.material-icons.sized, .fas {
   display: inline-block;
   vertical-align: middle;
   margin-top: {{iconTop}}px;

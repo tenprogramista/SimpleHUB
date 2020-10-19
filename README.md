@@ -1,13 +1,13 @@
-# SimpleHUB 1.5.1
+# SimpleHUB 1.6
 Customizable StreamElements-based alert HUB for your streams. 
 
 ## How To Use It
 In StreamElements Overlay Editor click on "+", then on "STATIC/CUSTOM" in the menu. Select "Custom widget". A new layer will be added. Click on it to open the layer menu and select  "Settings" then "OPEN EDITOR". Paste the code to the proper tabs in the editor (FIELDS should contain the json file contents.) Once you've done that, the static widget properties should be visible for you in different categories ("BASIC SETTINGS", "BASE APPEARANCE", "SUBS", "FOLLOWS", etc.) Customize them to your liking.
 
 ## Version Log
-**1.5.1** - added stamp animation, bugfixes
+**1.6** - added support for FontAwesome icons
 
-**1.5** - modified default appearance and values, added ability to switch alerts on/off and specify the starting stats displayed
+**1.5** - modified default appearance and values, added ability to switch alerts on/off and specify the starting stats displayed, added stamp animation, bugfixes
 
 **1.4** - add intro and outro animations, add icon animations and sounds
 

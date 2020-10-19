@@ -584,7 +584,7 @@
     "group": "SUBS - GENERAL",
     "type": "dropdown",
     "label": "Icon Source:",
-    "value": "",
+    "value": "material-icons",
     "options": {
       "material-icons" : "Material Icons",
       "font-awesome": "FontAwesome"
@@ -671,7 +671,7 @@
     "group": "FOLLOWS",
     "type": "dropdown",
     "label": "Icon Source:",
-    "value": "",
+    "value": "material-icons",
     "options": {
       "material-icons" : "Material Icons",
       "font-awesome": "FontAwesome"
@@ -726,7 +726,7 @@
     "group": "CHEERS",
     "type": "dropdown",
     "label": "Icon Source:",
-    "value": "",
+    "value": "material-icons",
     "options": {
       "material-icons" : "Material Icons",
       "font-awesome": "FontAwesome"
@@ -781,7 +781,7 @@
     "group": "DONATIONS",
     "type": "dropdown",
     "label": "Icon Source:",
-    "value": "",
+    "value": "material-icons",
     "options": {
       "material-icons" : "Material Icons",
       "font-awesome": "FontAwesome"
@@ -836,7 +836,7 @@
     "group": "HOSTS",
     "type": "dropdown",
     "label": "Icon Source:",
-    "value": "",
+    "value": "material-icons",
     "options": {
       "material-icons" : "Material Icons",
       "font-awesome": "FontAwesome"
@@ -891,7 +891,7 @@
     "group": "RAIDS",
     "type": "dropdown",
     "label": "Icon Source:",
-    "value": "",
+    "value": "material-icons",
     "options": {
       "material-icons" : "Material Icons",
       "font-awesome": "FontAwesome"

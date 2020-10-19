@@ -484,6 +484,11 @@
     "type": "hidden",
     "value": "SimpleHUB 1.5"
   },
+  "widgetAuthor": {
+    "group":"BASIC SETTINGS",
+    "type": "hidden",
+    "value": "Krzysztof \"TenSzop\" Gocek"
+  },
   
   "animationName": {
     "group":"BASE APPEARANCE",
@@ -506,13 +511,13 @@
     "group": "BASE APPEARANCE",
     "type": "colorpicker",
     "label": "Background color:",
-    "value": "#F2F2F2"
+    "value": "#F0F0FF"
   },
   "fontColor": {
     "group": "BASE APPEARANCE",
     "type": "colorpicker",
     "label": "Font color:",
-    "value": "#000000"
+    "value": "#000010"
   },
   "fontFamily": {
     "group": "BASE APPEARANCE",
@@ -573,7 +578,7 @@
     "group": "SUBS - GENERAL",
     "type": "colorpicker",
     "label": "Sub color:",
-    "value": "#F2F2F2"
+    "value": "#001010"
   },
   "subFontSource": {
     "group": "SUBS - GENERAL",
@@ -622,7 +627,7 @@
     "group": "SUBS - GIFTS",
     "type": "colorpicker",
     "label": "Gift color:",
-    "value": "#F2F2F2"
+    "value": "#001010"
   },
   "giftNote": {
     "group": "SUBS - GIFTS",
@@ -635,7 +640,7 @@
     "group": "SUBS - COMMUNITY",
     "type": "colorpicker",
     "label": "Community gift color:",
-    "value": "#F2F2F2"
+    "value": "#001010"
   },
   "communitySingleSuffix": {
     "group": "SUBS - COMMUNITY",
@@ -660,7 +665,7 @@
     "group": "FOLLOWS",
     "type": "colorpicker",
     "label": "Follow color:",
-    "value": "#F2F2F2"
+    "value": "#001010"
   },
   "followFontSource": {
     "group": "FOLLOWS",
@@ -715,7 +720,7 @@
     "group": "CHEERS",
     "type": "colorpicker",
     "label": "Cheer color:",
-    "value": "#F2F2F2"
+    "value": "#001010"
   }, 
   "cheerFontSource": {
     "group": "CHEERS",
@@ -770,7 +775,7 @@
     "group": "DONATIONS",
     "type": "colorpicker",
     "label": "Tip color:",
-    "value": "#F2F2F2"
+    "value": "#001010"
   },
   "tipFontSource": {
     "group": "DONATIONS",
@@ -825,7 +830,7 @@
     "group": "HOSTS",
     "type": "colorpicker",
     "label": "Host color:",
-    "value": "#F2F2F2"
+    "value": "#001010"
   }, 
   "hostFontSource": {
     "group": "HOSTS",
@@ -880,7 +885,7 @@
     "group": "RAIDS",
     "type": "colorpicker",
     "label": "Raid color:",
-    "value": "#F2F2F2"
+    "value": "#001010"
   }, 
   "raidFontSource": {
     "group": "RAIDS",

@@ -193,7 +193,7 @@ function follower(data, showAnimation) {
   var username = $("#username");
   var dynamic = $("#dynamic");
   var delay = showAnimation ? globalDelay : 0;
-
+  var dynamicIconHTML;
   var iconHTML;
 
   if(field.followFontSource === "font-awesome") {
@@ -229,7 +229,9 @@ function follower(data, showAnimation) {
 function cheer(data, showAnimation) {
   var icon = $("#icon");
   var username = $("#username");
+  var dynamic = $("#dynamic");
   var delay = showAnimation ? globalDelay : 0;
+  var dynamicIconHTML;
   var iconHTML;
 
   if(field.cheerFontSource === "font-awesome") {
@@ -265,8 +267,10 @@ function cheer(data, showAnimation) {
 function tip(data, showAnimation) {
   var icon = $("#icon");
   var username = $("#username");
+  var dynamic = $("#dynamic");
   var currency = data.amount.toLocaleString(userLocale, {style: 'currency', currency: userCurrency.code});
   var delay = showAnimation ? globalDelay : 0;
+  var dynamicIconHTML;
   var iconHTML;
 
   if(field.tipFontSource === "font-awesome") {
@@ -302,7 +306,9 @@ function tip(data, showAnimation) {
 function host(data, showAnimation) {
   var icon = $("#icon");
   var username = $("#username");
+  var dynamic = $("#dynamic");
   var delay = showAnimation ? globalDelay : 0;
+  var dynamicIconHTML;
   var iconHTML;
 
   if(field.hostFontSource === "font-awesome") {
@@ -338,7 +344,9 @@ function host(data, showAnimation) {
 function raid(data, showAnimation) {
   var icon = $("#icon");
   var username = $("#username");
+  var dynamic = $("#dynamic");
   var delay = showAnimation ? globalDelay : 0;
+  var dynamicIconHTML;
   var iconHTML;
 
   if(field.raidFontSource === "font-awesome") {

@@ -451,26 +451,14 @@
     "group": "BASIC SETTINGS",
     "type": "dropdown",
     "label": "Start event:",
-    "value": "follow-latest",
+    "value": "fan-latest",
     "options": {
+      "fan-latest": "Latest Fan",
       "follower-latest": "Latest Follower",
-      "subscriber-latest": "Latest Subscriber",
-      "cheer-latest": "Latest Cheer",
-      "cheer-alltime-top-donation": "Alltime Top Cheer",
-      "cheer-monthly-top-donation": "Monthly Top Cheer",
-      "cheer-weekly-top-donation": "Weekly Top Cheer",
-      "cheer-alltime-top-donator": "Alltime Top Cheerer",
-      "cheer-monthly-top-donator": "Monthly Top Cheerer",
-      "cheer-weekly-top-donator": "Weekly Top Cheerer",
-      "tip": "Latest Donation",
-      "tip-alltime-top-donation": "Alltime Top Donation",
-      "tip-monthly-top-donation": "Monthly Top Donation",
-      "tip-weekly-top-donation": "Weekly Top Donation",
-      "tip-alltime-top-donator": "Alltime Top Donator",
-      "tip-monthly-top-donator": "Monthly Top Donator",
-      "tip-weekly-top-donator": "Weekly Top Donator",
-      "raid-latest": "Latest Raid",
-      "host-latest": "Latest Host"
+      "share-latest": "Latest Share",
+      "stars-latest": "Latest Stars",
+      "supporter-latest": "Latest Supporter",
+      "videolike-latest": "Latest Videolike"
     }
   },
   "showInitialAnimation": {
@@ -568,20 +556,20 @@
     "value": 12
   },
 
-  "showSubAlert": {
-    "group": "SUBS - GENERAL",
+  "showFanAlert": {
+    "group": "FANS",
     "type":"checkbox",
     "label": "Display Alert?",
     "value": true
   },
-  "subColor": {
-    "group": "SUBS - GENERAL",
+  "fanColor": {
+    "group": "FANS",
     "type": "colorpicker",
-    "label": "Sub color:",
+    "label": "Fan color:",
     "value": "#001010"
   },
-  "subFontSource": {
-    "group": "SUBS - GENERAL",
+  "fanFontSource": {
+    "group": "FANS",
     "type": "dropdown",
     "label": "Icon Source:",
     "value": "material-icons",
@@ -590,14 +578,14 @@
       "font-awesome": "FontAwesome"
     }
   },
-  "subIcon": { 
-    "group": "SUBS - GENERAL",
+  "fanIcon": { 
+    "group": "FANS",
     "type": "text",
-    "label": "Sub Icon Name:",
+    "label": "Fan Icon Name:",
     "value": "star"
   },
-  "subIconAnimation": {
-    "group":"SUBS - GENERAL",
+  "fanIconAnimation": {
+    "group":"FANS",
     "type": "dropdown",
     "label": "Icon animation:",
     "value": "rotate",
@@ -608,51 +596,19 @@
       "stamp": "Stamp"
     }
   },
-  "subAudio": {
-    "group":"SUBS - GENERAL",
+  "fanAudio": {
+    "group":"FANS",
     "type": "sound-input",
-    "label": "Sub alert sound:"
+    "label": "Fan alert sound:"
   },
-  "subVolume": {
-    "group":"SUBS - GENERAL",
+  "fanVolume": {
+    "group":"FANS",
     "type": "slider",
     "label": "Alert volume:",
     "value": 0.5,
     "min": 0,
     "max": 1,
     "step": 0.02
-  },
-
-  "giftColor": {
-    "group": "SUBS - GIFTS",
-    "type": "colorpicker",
-    "label": "Gift color:",
-    "value": "#001010"
-  },
-  "giftNote": {
-    "group": "SUBS - GIFTS",
-    "type":"text",
-    "label": "A 'gifted-by' note:",
-    "value": "gifted by"
-  },
-
-  "communityColor": {
-    "group": "SUBS - COMMUNITY",
-    "type": "colorpicker",
-    "label": "Community gift color:",
-    "value": "#001010"
-  },
-  "communitySingleSuffix": {
-    "group": "SUBS - COMMUNITY",
-    "type": "text",
-    "label": "Suffix for a single community gift:",
-    "value": "gifted someone a sub!"
-  },
-  "communityMultipleSuffix": {
-    "group": "SUBS - COMMUNITY",
-    "type": "text",
-    "label": "Suffix for a bulk community gift:",
-    "value": "gifted subs"
   },
 
   "showFollowAlert": {
@@ -710,20 +666,20 @@
     "step": 0.02
   },
 
-  "showCheerAlert": {
-    "group": "CHEERS",
+  "showStarAlert": {
+    "group": "STARS",
     "type":"checkbox",
     "label": "Display Alert?",
     "value": true
   },
-  "cheerColor": {
-    "group": "CHEERS",
+  "starColor": {
+    "group": "STARS",
     "type": "colorpicker",
-    "label": "Cheer color:",
+    "label": "Star color:",
     "value": "#001010"
   }, 
-  "cheerFontSource": {
-    "group": "CHEERS",
+  "starFontSource": {
+    "group": "STARS",
     "type": "dropdown",
     "label": "Icon Source:",
     "value": "material-icons",
@@ -732,14 +688,14 @@
       "font-awesome": "FontAwesome"
     }
   },
-  "cheerIcon": { 
-    "group": "CHEERS",
+  "starIcon": { 
+    "group": "STARS",
     "type": "text",
-    "label": "Cheer Icon Name:",
+    "label": "Star Icon Name:",
     "value": "whatshot"
   },
-  "cheerIconAnimation": {
-    "group":"CHEERS",
+  "starIconAnimation": {
+    "group":"STARS",
     "type": "dropdown",
     "label": "Icon animation:",
     "value": "pulse",
@@ -750,13 +706,13 @@
       "stamp": "Stamp"
     }
   },
-  "cheerAudio": {
-    "group": "CHEERS",
+  "starAudio": {
+    "group": "STARS",
     "type": "sound-input",
-    "label": "Cheer alert sound:"
+    "label": "Star alert sound:"
   },
-  "cheerVolume": {
-    "group":"CHEERS",
+  "starVolume": {
+    "group":"STARS",
     "type": "slider",
     "label": "Alert volume:",
     "value": 0.5,
@@ -765,20 +721,20 @@
     "step": 0.02
   },
 
-  "showTipAlert": {
-    "group":"DONATIONS",
+  "showShareAlert": {
+    "group":"SHARES",
     "type":"checkbox",
     "label": "Display Alert?",
     "value": true
   },
-  "tipColor": {
-    "group": "DONATIONS",
+  "shareColor": {
+    "group": "SHARES",
     "type": "colorpicker",
-    "label": "Tip color:",
+    "label": "Share color:",
     "value": "#001010"
   },
-  "tipFontSource": {
-    "group": "DONATIONS",
+  "shareFontSource": {
+    "group": "SHARES",
     "type": "dropdown",
     "label": "Icon Source:",
     "value": "material-icons",
@@ -787,14 +743,14 @@
       "font-awesome": "FontAwesome"
     }
   },
-  "tipIcon": {
-    "group": "DONATIONS",
+  "shareIcon": {
+    "group": "SHARES",
     "type": "text",
-    "label": "Donation Icon Name:",
+    "label": "Share Icon Name:",
     "value": "monetization_on"
   },
-  "tipIconAnimation": {
-    "group":"DONATIONS",
+  "shareIconAnimation": {
+    "group":"SHARES",
     "type": "dropdown",
     "label": "Icon animation:",
     "value": "pulse",
@@ -805,13 +761,13 @@
       "stamp": "Stamp"
     }
   },
-  "tipAudio": {
-    "group":"DONATIONS",
+  "shareAudio": {
+    "group":"SHARES",
     "type": "sound-input",
-    "label": "Donations alert sound:"
+    "label": "Share alert sound:"
   },
-  "tipVolume": {
-    "group":"DONATIONS",
+  "shareVolume": {
+    "group":"SHARES",
     "type": "slider",
     "label": "Alert volume:",
     "value": 0.5,
@@ -820,20 +776,20 @@
     "step": 0.02
   },
   
-  "showHostAlert": {
-    "group": "HOSTS",
+  "showSupporterAlert": {
+    "group": "SUPPORTERS",
     "type":"checkbox",
     "label": "Display Alert?",
     "value": true
   },
-  "hostColor": {
-    "group": "HOSTS",
+  "supporterColor": {
+    "group": "SUPPORTERS",
     "type": "colorpicker",
-    "label": "Host color:",
+    "label": "Supporter color:",
     "value": "#001010"
   }, 
-  "hostFontSource": {
-    "group": "HOSTS",
+  "supporterFontSource": {
+    "group": "SUPPORTERS",
     "type": "dropdown",
     "label": "Icon Source:",
     "value": "material-icons",
@@ -842,14 +798,14 @@
       "font-awesome": "FontAwesome"
     }
   },
-  "hostIcon": {
-    "group": "HOSTS",
+  "supporterIcon": {
+    "group": "SUPPORTERS",
     "type": "text",
-    "label": "Host Icon Name:",
+    "label": "Supporter Icon Name:",
     "value": "tv"
   },
-  "hostIconAnimation": {
-    "group":"HOSTS",
+  "supporterIconAnimation": {
+    "group":"SUPPORTERS",
     "type": "dropdown",
     "label": "Icon animation:",
     "value": "scale",
@@ -860,13 +816,13 @@
       "stamp": "Stamp"
     }
   },
-  "hostAudio": {
-    "group":"HOSTS",
+  "supporterAudio": {
+    "group":"SUPPORTERS",
     "type": "sound-input",
-    "label": "Host alert sound:"
+    "label": "Supporter alert sound:"
   },
-  "hostVolume": {
-    "group":"HOSTS",
+  "supporterVolume": {
+    "group":"SUPPORTERS",
     "type": "slider",
     "label": "Alert volume:",
     "value": 0.5,
@@ -875,20 +831,20 @@
     "step": 0.02
   },
 
-  "showRaidAlert": {
-    "group": "RAIDS",
+  "showVideolikeAlert": {
+    "group": "VIDEOLIKES",
     "type":"checkbox",
     "label": "Display Alert?",
     "value": true
   },
-  "raidColor": {
-    "group": "RAIDS",
+  "videolikeColor": {
+    "group": "VIDEOLIKES",
     "type": "colorpicker",
-    "label": "Raid color:",
+    "label": "Videolike color:",
     "value": "#001010"
   }, 
-  "raidFontSource": {
-    "group": "RAIDS",
+  "videolikeFontSource": {
+    "group": "VIDEOLIKES",
     "type": "dropdown",
     "label": "Icon Source:",
     "value": "material-icons",
@@ -897,14 +853,14 @@
       "font-awesome": "FontAwesome"
     }
   },
-  "raidIcon": {
-    "group": "RAIDS",
+  "videolikeIcon": {
+    "group": "VIDEOLIKES",
     "type": "text",
-    "label": "Raid Icon Name:",
+    "label": "Videolike Icon Name:",
     "value": "security"
   },
-  "raidIconAnimation": {
-    "group":"RAIDS",
+  "videolikeIconAnimation": {
+    "group":"VIDEOLIKES",
     "type": "dropdown",
     "label": "Icon animation:",
     "value": "scale",
@@ -915,13 +871,13 @@
       "stamp": "Stamp"
     }
   },
-  "raidAudio": {
-    "group":"RAIDS",
+  "videolikeAudio": {
+    "group":"VIDEOLIKES",
     "type": "sound-input",
-    "label": "Raid alert sound:"
+    "label": "Videolike alert sound:"
   },
-  "raidVolume": {
-    "group":"RAIDS",
+  "videolikeVolume": {
+    "group":"VIDEOLIKES",
     "type": "slider",
     "label": "Alert volume:",
     "value": 0.5,

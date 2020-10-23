@@ -10,35 +10,23 @@ window.addEventListener('onWidgetLoad', (obj) => {
   globalDelay = field.widgetDuration * 500;
 
   switch (field.initialRecentEvent) {
+    case "fan-latest":
+      fan(data, field.initialRecentEvent);
+      break;
     case "follower-latest":
-      follower(data[field.initialRecentEvent], field.showInitialAnimation);
+      follower(data, field.initialRecentEvent);
       break;
-    case "subscriber-latest":
-      subscriber(data[field.initialRecentEvent], field.showInitialAnimation);
+    case "share-latest":
+      share(data, field.initialRecentEvent);
       break;
-    case "cheer-latest":
-    case "cheer-alltime-top-donation":
-    case "cheer-monthly-top-donation":
-    case "cheer-weekly-top-donation":
-    case "cheer-alltime-top-donator":
-    case "cheer-monthly-top-donator":
-    case "cheer-weekly-top-donator":
-      cheer(data[field.initialRecentEvent], field.showInitialAnimation);
+    case "stars-latest":
+      stars(data, field.initialRecentEvent);
       break;
-    case "tip-latest":
-    case "tip-alltime-top-donation":
-    case "tip-monthly-top-donation":
-    case "tip-weekly-top-donation":
-    case "tip-alltime-top-donator":
-    case "tip-monthly-top-donator":
-    case "tip-weekly-top-donator":
-      tip(data[field.initialRecentEvent], field.showInitialAnimation);
+    case "supporter-latest":
+      supporter(data, field.initialRecentEvent);
       break;
-    case "raid-latest":
-      raid(data[field.initialRecentEvent], field.showInitialAnimation);
-      break;
-    case "host-latest":
-      host(data[field.initialRecentEvent], field.showInitialAnimation);
+    case "videolike-latest":
+      videolike(data, field.initialRecentEvent);
       break;
 
     default:
@@ -52,149 +40,105 @@ window.addEventListener('onEventReceived', (obj) => {
   const listener = obj.detail.listener;
   const data = obj.detail.event;
   
-  if(listener === "tip-latest") {
-    tip(data, field.showTipAlert);
+  if(listener === "fan-latest") {
+    fan(data, field.showFanAlert);
   }
-  else if(listener === "subscriber-latest") {
-    subscriber(data, field.showSubAlert);
+  else if(listener === "star-latest") {
+    stars(data, field.showStarAlert);
   }
   else if(listener === "follower-latest") {
     follower(data, field.showFollowAlert);
   }
-  else if(listener === "cheer-latest") {
-    cheer(data, field.showCheerAlert);
+  else if(listener === "share-latest") {
+    share(data, field.showCheerAlert);
   } 
-  else if(listener === "host-latest") {
-    host(data, field.showHostAlert);
+  else if(listener === "supporter-latest") {
+    supporter(data, field.showHostAlert);
   }
-  else if(listener === "raid-latest") {
-    raid(data, field.showRaidAlert);
+  else if(listener === "videolike-latest") {
+    videolike(data, field.showRaidAlert);
   }
 });
 
-// SUB
-function subscriber(data, showAnimation) {
+// FAN
+function fan(data, showAnimation) {
   var icon = $("#icon");
   var username = $("#username");
   var dynamic = $("#dynamic");
   var iconHTML;
   var dynamicIconHTML;
 
-  if(field.subFontSource === "font-awesome") {
-    dynamicIconHTML = `<i class="fas fa-${field.subIcon} ${field.subIconAnimation}"></i>`;
-    iconHTML = `<i class="fas fa-${field.subIcon}"></i>`;
+  if(field.fanFontSource === "font-awesome") {
+    dynamicIconHTML = `<i class="fas fa-${field.fanIcon} ${field.fanIconAnimation}"></i>`;
+    iconHTML = `<i class="fas fa-${field.fanIcon}"></i>`;
   } 
   else {
-    dynamicIconHTML =  `<i class="material-icons sized ${field.subIconAnimation}">${field.subIcon}</i>`;
-    iconHTML = `<i class="material-icons sized">${field.subIcon}</i>`;
+    dynamicIconHTML =  `<i class="material-icons sized ${field.fanIconAnimation}">${field.fanIcon}</i>`;
+    iconHTML = `<i class="material-icons sized">${field.fanIcon}</i>`;
   }
   
-  var delay = showAnimation ? globalDelay : 0;
+  // HUB
+  setTimeout(() => {
+    username.html(`${data.name}`);
+    icon.css("color", `${field.fanColor}`);
+    icon.html(iconHTML);
+  }, delay);
 
-  if(data.bulkGifted === true) {
+  // ALERT
+  if(showAnimation) {
+    dynamic.html(
+      `<div class="alert sub">
+      ${dynamicIconHTML}
+      <audio id="audio" autoplay hidden src="${field.fanAudio}></audio>
+      <div class="name">${data.name}</div>
+      </div>`);
 
-    if(data.amount === 1) {
-      
-      // HUB
-      setTimeout(() => {
-        username.html(`${data.name} ${field.communitySingleSuffix}`);
-        icon.css("color", `${field.communityColor}`);
-        icon.html(iconHTML);
-      }, delay);
-
-      // ALERT
-      if(showAnimation) {
-        dynamic.html(
-          `<div class="alert sub">
-          ${dynamicIconHTML}
-          <audio id="audio" autoplay hidden src="${field.subAudio}></audio>
-          <div class="name">${data.name} ${field.communitySingleSuffix}</div>
-          </div>`);
-
-        $("#audio")[0].volume = field.subVolume;
-      }
-
-      return;
-    }
-
-    // HUB
-    setTimeout(() => {
-      username.html(`${data.sender} ${field.communityMultipleSuffix} (x${data.amount})`);
-      icon.css("color", `${field.communityColor}`);
-      icon.html(iconHTML);
-    }, delay);
-
-    // ALERT
-    if(showAnimation) {
-      dynamic.html(
-        `<div class="alert sub">
-        ${dynamicIconHTML}
-        <audio id="audio" autoplay hidden src="${field.subAudio}"></audio>
-        <div class="name">${data.sender} ${field.communityMultipleSuffix} (x${data.amount})</div>
-        </div>`);
-
-        $("#audio")[0].volume = field.subVolume;
-    }
-  }
-
-  else if (data.gifted === true) {
-
-    if (data.isCommunityGift === true) {
-      SE_API.resumeQueue();
-      return;
-    } 
-
-    // HUB
-    setTimeout(() => {
-      username.html(`${data.name} (${field.giftNote} ${data.sender})`);
-      icon.css("color", `${field.giftColor}`);
-      icon.html(iconHTML);
-    }, delay);
-
-    // ALERT
-    if(showAnimation) {
-      dynamic.html(
-        `<div class="alert sub">
-        ${dynamicIconHTML}
-        <audio id="audio" autoplay hidden src="${field.subAudio}"></audio>
-        <div class="name">${data.name} (${field.giftNote} ${data.sender})</div>
-        </div>`);
-
-        $("#audio")[0].volume = field.subVolume;
-    }
-  } 
-
-  else {
-
-    // HUB
-    setTimeout(() => {
-      username.html(`${data.name} (x${data.amount})`);
-      icon.css("color", `${field.subColor}`);
-      icon.html(iconHTML);
-    }, delay);
-
-    // ALERT
-    if(showAnimation) {
-      dynamic.html(
-        `<div class="alert sub">
-        ${dynamicIconHTML}
-        <audio id="audio" autoplay hidden src="${field.subAudio}"></audio>
-        <div class="name">${data.name} (x${data.amount})</div>
-        </div>`);
-
-        $("#audio")[0].volume = field.subVolume;
-    }
+    $("#audio")[0].volume = field.fanVolume;
   }
 }
 
-// FOLLOW
+function stars(data, showAnimation) {
+  var icon = $("#icon");
+  var username = $("#username");
+  var dynamic = $("#dynamic");
+  var iconHTML;
+  var dynamicIconHTML;
+
+  if(field.starFontSource === "font-awesome") {
+    dynamicIconHTML = `<i class="fas fa-${field.starIcon} ${field.starIconAnimation}"></i>`;
+    iconHTML = `<i class="fas fa-${field.starIcon}"></i>`;
+  } 
+  else {
+    dynamicIconHTML =  `<i class="material-icons sized ${field.starIconAnimation}">${field.starIcon}</i>`;
+    iconHTML = `<i class="material-icons sized">${field.starIcon}</i>`;
+  }
+  
+  // HUB
+  setTimeout(() => {
+    username.html(`${data.name}`);
+    icon.css("color", `${field.starColor}`);
+    icon.html(iconHTML);
+  }, delay);
+
+  // ALERT
+  if(showAnimation) {
+    dynamic.html(
+      `<div class="alert sub">
+      ${dynamicIconHTML}
+      <audio id="audio" autoplay hidden src="${field.starAudio}></audio>
+      <div class="name">${data.name}</div>
+      </div>`);
+
+    $("#audio")[0].volume = field.starVolume;
+  }
+}
+
 function follower(data, showAnimation) {
   var icon = $("#icon");
   var username = $("#username");
   var dynamic = $("#dynamic");
-  var delay = showAnimation ? globalDelay : 0;
-  var dynamicIconHTML;
   var iconHTML;
+  var dynamicIconHTML;
 
   if(field.followFontSource === "font-awesome") {
     dynamicIconHTML = `<i class="fas fa-${field.followIcon} ${field.followIconAnimation}"></i>`;
@@ -204,176 +148,131 @@ function follower(data, showAnimation) {
     dynamicIconHTML =  `<i class="material-icons sized ${field.followIconAnimation}">${field.followIcon}</i>`;
     iconHTML = `<i class="material-icons sized">${field.followIcon}</i>`;
   }
-
+  
   // HUB
   setTimeout(() => {
     username.html(`${data.name}`);
-    icon.html(iconHTML);
     icon.css("color", `${field.followColor}`);
+    icon.html(iconHTML);
   }, delay);
 
-   // ALERT
+  // ALERT
   if(showAnimation) {
     dynamic.html(
-    `<div class="alert follow">
-    ${dynamicIconHTML}
-    <audio id="audio" autoplay hidden src="${field.followAudio}"></audio>
-    <div class="name">${data.name}</div>
-    </div>`);
+      `<div class="alert sub">
+      ${dynamicIconHTML}
+      <audio id="audio" autoplay hidden src="${field.followAudio}></audio>
+      <div class="name">${data.name}</div>
+      </div>`);
 
     $("#audio")[0].volume = field.followVolume;
   }
 }
 
-// CHEER
-function cheer(data, showAnimation) {
+function share(data, showAnimation) {
   var icon = $("#icon");
   var username = $("#username");
   var dynamic = $("#dynamic");
-  var delay = showAnimation ? globalDelay : 0;
-  var dynamicIconHTML;
   var iconHTML;
+  var dynamicIconHTML;
 
-  if(field.cheerFontSource === "font-awesome") {
-    dynamicIconHTML = `<i class="fas fa-${field.cheerIcon} ${field.cheerIconAnimation}"></i>`;
-    iconHTML = `<i class="fas fa-${field.cheerIcon}"></i>`;
+  if(field.shareFontSource === "font-awesome") {
+    dynamicIconHTML = `<i class="fas fa-${field.shareIcon} ${field.shareIconAnimation}"></i>`;
+    iconHTML = `<i class="fas fa-${field.shareIcon}"></i>`;
   } 
   else {
-    dynamicIconHTML =  `<i class="material-icons sized ${field.cheerIconAnimation}">${field.cheerIcon}</i>`;
-    iconHTML = `<i class="material-icons sized">${field.cheerIcon}</i>`;
-  }
-
-  // HUB
-  setTimeout(() => {
-    username.html(`${data.name} (X${data.amount})`);
-    icon.html(iconHTML);
-    icon.css("color", `${field.cheerColor}`);
-  }, delay);
-
-  // ALERT
-  if(showAnimation) {
-    dynamic.html(
-    `<div class="alert cheer">
-    ${dynamicIconHTML}
-    <audio id="audio" autoplay hidden src="${field.cheerAudio}"></audio>
-    <div class="name">${data.name} (X${data.amount})</div>
-    </div>`);
-
-    $("#audio")[0].volume = field.cheerVolume;
-  }
-}
-
-// TIP
-function tip(data, showAnimation) {
-  var icon = $("#icon");
-  var username = $("#username");
-  var dynamic = $("#dynamic");
-  var currency = data.amount.toLocaleString(userLocale, {style: 'currency', currency: userCurrency.code});
-  var delay = showAnimation ? globalDelay : 0;
-  var dynamicIconHTML;
-  var iconHTML;
-
-  if(field.tipFontSource === "font-awesome") {
-    dynamicIconHTML = `<i class="fas fa-${field.tipIcon} ${field.tipIconAnimation}"></i>`;
-    iconHTML = `<i class="fas fa-${field.tipIcon}"></i>`;
-  } 
-  else {
-    dynamicIconHTML =  `<i class="material-icons sized ${field.tipIconAnimation}">${field.tipIcon}</i>`;
-    iconHTML = `<i class="material-icons sized">${field.tipIcon}</i>`;
+    dynamicIconHTML =  `<i class="material-icons sized ${field.shareIconAnimation}">${field.shareIcon}</i>`;
+    iconHTML = `<i class="material-icons sized">${field.shareIcon}</i>`;
   }
   
   // HUB
   setTimeout(() => {
-    username.html(`${data.name} (${currency})`);
+    username.html(`${data.name}`);
+    icon.css("color", `${field.shareColor}`);
     icon.html(iconHTML);
-    icon.css("color", `${field.tipColor}`);
   }, delay);
 
   // ALERT
   if(showAnimation) {
     dynamic.html(
-    `<div class="alert tip">
-    ${dynamicIconHTML}
-    <audio id="audio" autoplay hidden src="${field.tipAudio}"></audio>
-    <div class="name">${data.name} (${currency})</div>
-    </div>`);
+      `<div class="alert sub">
+      ${dynamicIconHTML}
+      <audio id="audio" autoplay hidden src="${field.shareAudio}></audio>
+      <div class="name">${data.name}</div>
+      </div>`);
 
-    $("#audio")[0].volume = field.tipVolume;
+    $("#audio")[0].volume = field.shareVolume;
   }
 }
 
-// HOST
-function host(data, showAnimation) {
+function supporter(data, showAnimation) {
   var icon = $("#icon");
   var username = $("#username");
   var dynamic = $("#dynamic");
-  var delay = showAnimation ? globalDelay : 0;
-  var dynamicIconHTML;
   var iconHTML;
+  var dynamicIconHTML;
 
-  if(field.hostFontSource === "font-awesome") {
-    dynamicIconHTML = `<i class="fas fa-${field.hostIcon} ${field.hostIconAnimation}"></i>`;
-    iconHTML = `<i class="fas fa-${field.hostIcon}"></i>`;
+  if(field.supporterFontSource === "font-awesome") {
+    dynamicIconHTML = `<i class="fas fa-${field.supporterIcon} ${field.supporterIconAnimation}"></i>`;
+    iconHTML = `<i class="fas fa-${field.supporterIcon}"></i>`;
   } 
   else {
-    dynamicIconHTML =  `<i class="material-icons sized ${field.hostIconAnimation}">${field.hostIcon}</i>`;
-    iconHTML = `<i class="material-icons sized">${field.hostIcon}</i>`;
+    dynamicIconHTML =  `<i class="material-icons sized ${field.supporterIconAnimation}">${field.supporterIcon}</i>`;
+    iconHTML = `<i class="material-icons sized">${field.supporterIcon}</i>`;
   }
   
   // HUB
   setTimeout(() => {
-    username.html(`${data.name} (${data.amount})`);
+    username.html(`${data.name}`);
+    icon.css("color", `${field.supporterColor}`);
     icon.html(iconHTML);
-    icon.css("color", `${field.hostColor}`);
   }, delay);
 
   // ALERT
   if(showAnimation) {
     dynamic.html(
-    `<div class="alert host">
-    ${dynamicIconHTML}
-    <audio id="audio" autoplay hidden src="${field.hostAudio}"></audio>
-    <div class="name">${data.name} (${data.amount})</div>
-    </div>`);
+      `<div class="alert sub">
+      ${dynamicIconHTML}
+      <audio id="audio" autoplay hidden src="${field.supporterAudio}></audio>
+      <div class="name">${data.name}</div>
+      </div>`);
 
-    $("#audio")[0].volume = field.hostVolume;
+    $("#audio")[0].volume = field.supporterVolume;
   }
 }
 
-// RAID
-function raid(data, showAnimation) {
+function videolike(data, showAnimation) {
   var icon = $("#icon");
   var username = $("#username");
   var dynamic = $("#dynamic");
-  var delay = showAnimation ? globalDelay : 0;
-  var dynamicIconHTML;
   var iconHTML;
+  var dynamicIconHTML;
 
-  if(field.raidFontSource === "font-awesome") {
-    dynamicIconHTML = `<i class="fas fa-${field.raidIcon} ${field.raidIconAnimation}"></i>`;
-    iconHTML = `<i class="fas fa-${field.raidIcon}"></i>`;
+  if(field.videolikeFontSource === "font-awesome") {
+    dynamicIconHTML = `<i class="fas fa-${field.videolikeIcon} ${field.videolikeIconAnimation}"></i>`;
+    iconHTML = `<i class="fas fa-${field.videolikeIcon}"></i>`;
   } 
   else {
-    dynamicIconHTML =  `<i class="material-icons sized ${field.raidIconAnimation}">${field.raidIcon}</i>`;
-    iconHTML = `<i class="material-icons sized">${field.raidIcon}</i>`;
+    dynamicIconHTML =  `<i class="material-icons sized ${field.videolikeIconAnimation}">${field.videolikeIcon}</i>`;
+    iconHTML = `<i class="material-icons sized">${field.videolikeIcon}</i>`;
   }
-
+  
   // HUB
   setTimeout(() => {
-    username.html(`${data.name} (${data.amount})`);
+    username.html(`${data.name}`);
+    icon.css("color", `${field.videolikeColor}`);
     icon.html(iconHTML);
-    icon.css("color", `${field.raidColor}`);
   }, delay);
 
   // ALERT
   if(showAnimation) {
     dynamic.html(
-    `<div class="alert raid">
-    ${dynamicIconHTML}
-    <audio id="audio" autoplay hidden src="${field.raidAudio}"></audio>
-    <div class="name">${data.name} (${data.amount})</div>
-    </div>`);
+      `<div class="alert sub">
+      ${dynamicIconHTML}
+      <audio id="audio" autoplay hidden src="${field.videolikeAudio}></audio>
+      <div class="name">${data.name}</div>
+      </div>`);
 
-    $("#audio")[0].volume = field.raidVolume;
+    $("#audio")[0].volume = field.videolikeVolume;
   }
 }

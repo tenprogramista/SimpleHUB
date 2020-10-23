@@ -55,6 +55,7 @@
   display: flex;
   align-items: center;
   padding-left: {{iconMargin}}px;
+  color: {{bgColor}};
   /* HIDDEN BEFORE AND AFTER ANIMATION */
   opacity: 0;
   clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
@@ -62,34 +63,28 @@
   animation: {{animationName}} {{widgetDuration}}s ease-in-out;
 }
 
-.alert.sub {
-  background-color: {{subColor}};
-  color: {{bgColor}};
+.alert.fan {
+  background-color: {{fanColor}};
 }
 
-.alert.follow {
-  background-color: {{followColor}};
-  color: {{bgColor}};
+.alert.star {
+  background-color: {{starColor}};
 }
 
-.alert.cheer {
-  background-color: {{cheerColor}};
-  color: {{bgColor}};
+.alert.videolike {
+  background-color: {{videolikeColor}};
 }
 
-.alert.tip{
-  background-color: {{tipColor}};
-  color: {{bgColor}};
+.alert.share {
+  background-color: {{shareColor}};
 }
 
-.alert.host {
-  background-color: {{hostColor}};
-  color: {{bgColor}};
+.alert.supporter {
+  background-color: {{supporterColor}};
 }
 
-.alert.raid {
-  background-color: {{raidColor}};
-  color: {{bgColor}};
+.alert.follower {
+  background-color: {{followerColor}};
 }
 
 /* ICON ANIMATIONS */

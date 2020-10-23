@@ -97,7 +97,7 @@ function subscriber(data, showAnimation) {
       
       // HUB
       setTimeout(() => {
-        username.html(`${data.name} ${field.communitySingleSuffix}`);
+        username.html(`${data.sender} ${field.communitySingleSuffix}`);
         icon.css("color", `${field.communityColor}`);
         icon.html(iconHTML);
       }, delay);
@@ -108,7 +108,7 @@ function subscriber(data, showAnimation) {
           `<div class="alert sub">
           ${dynamicIconHTML}
           <audio id="audio" autoplay hidden src="${field.subAudio}></audio>
-          <div class="name">${data.name} ${field.communitySingleSuffix}</div>
+          <div class="name">${data.sender} ${field.communitySingleSuffix}</div>
           </div>`);
 
         $("#audio")[0].volume = field.subVolume;
